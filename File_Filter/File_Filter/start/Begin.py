@@ -11,30 +11,19 @@ import Run
 #程序运行入口
 def Begin():
     #logging 的初始化
-    init.LogInit()
+    init.Log()
     logging.info("logging开始运行...")
 
-    #输入文件路径
-    Files = []
-    while True:
-        Path = input("请键入识别文件的相对路径或者绝对路径/exit为停止:")
-        if Path == '/exit':
-            break
-        else:
-            Files.append(os.path.abspath(Path))
-    print ("用户最后选择的路径为:{}".format(Files))
-    logging.info("用户选择的路径为:{}".format(Files))
+    #文件的初始化
+    Files = init.File_Mode1()
+    logging.info("File开始运行...")
 
-    #输入关键词
-    words = []
-    while True:
-        word = input("请输入关键词并/exit为停止:")
-        if word == '/exit':
-            break
-        else:
-            words.append(word)
-    print ("用户最后选择的关键词为:{}".format(words))
-    logging.info("用户最后选择的关键词为:{}".format(words))
+    #关键词的初始化
+    words = init.KeyWord_Mode1()
+    logging.info("KeyWord开始运行...")
+    
+
+    
     
     #启动程序
     print ("程序开始运行")
