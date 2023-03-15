@@ -1,16 +1,5 @@
-import start.Begin
-import start.Run
-import interact.InteractUser
-import init.LogInit
-import handle.ChooseWord
-import handle.MatchWord
-import handle.ParameterInvaild
+import File_Filter.start
 
-Begin = start.Begin.Begin
-Run = start.Run.Run
-Interact = interact.InteractUser.InteractUser
-LogInit = init.LogInit.LogInit
-ChooseWord = handle.ChooseWord.ChooseWord
-MatchWord = handle.MatchWord.MatchWord
-ParameterInvaild = handle.ParameterInvaild.ParameterInvaild
-Customization_Error = handle.ParameterInvaild.Customization_Error
+
+#对外只提供开始的接口
+Begin = File_Filter.start.Begin

@@ -1,9 +1,12 @@
+#init中主要是初始化
 import init.LogInit
 import init.FileInit
 import init.KeyWordInit
 
+
 #日志初始化
 Log = init.LogInit.LogInit
+
 #文件初始化
 #1 交互式读入 
 #2 文件读入

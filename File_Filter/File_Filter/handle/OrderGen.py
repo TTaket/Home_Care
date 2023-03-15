@@ -1,16 +1,15 @@
 import time
+import conf
 
-USERINFOPATH = "../../In/UserInfo.txt"
-DEMANDINFOPATH = "../../In/DemandInfo.txt"
 def OrderGen(keyword):
     #读取用户信息
-    f_User = open(USERINFOPATH , 'r' ,encoding='utf-8' )
+    f_User = open(conf.USERINFOPATH , 'r' ,encoding='utf-8' )
     UserID = f_User.read().splitlines()
     UserID = UserID[0][2:]
 
 
     #进行匹配需求id
-    f_Demand = open(DEMANDINFOPATH , 'r' ,encoding='utf-8' )
+    f_Demand = open(conf.DEMANDINFOPATH , 'r' ,encoding='utf-8' )
     f_Demand_list = f_Demand.read().splitlines()
     Demand_dic = {}
     for tmpinfo in f_Demand_list:

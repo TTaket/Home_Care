@@ -1,3 +1,3 @@
 import interact.InteractUser
 
-InteractUser = interact.InteractUser.InteractUser
+UserChoose = interact.InteractUser.InteractUser

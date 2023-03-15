@@ -1,7 +1,7 @@
 import logging
+import conf
 
 
-FILEPATH = '../../In/KeyWords.txt'
 #输入关键词
 def KeyWordInit_Mode1():
     logging.info("KeyWordMode 为 交互输入")
@@ -20,7 +20,7 @@ def KeyWordInit_Mode1():
 def KeyWordInit_Mode2():
     logging.info("KeyWordMode 为 文件读入")
     words = []
-    f = open(FILEPATH,'r',encoding='utf-8')    
+    f = open(conf.KEYWORDPATH,'r',encoding='utf-8')    
     flist = f.read().splitlines()
     for word in flist:
         if len(word) == 0 or word[0] == '#':

@@ -1,12 +1,12 @@
 # coding=utf-8    
 import os
 import logging 
-import time
 import handle 
 import interact
+import conf
 from handle.ParameterInvaild import Customization_Error
 
-ANSFILEPATH = "../../out/File_Filter_ans.txt"
+
 
 
 #主体运行程序
@@ -21,8 +21,8 @@ def Run(Allpath , Keyword):
         logging.info("参数校验通过")
 
     #创建并且打开一个存储答案的文档
-    fans = open(ANSFILEPATH,'w',encoding='utf-8')    
-    logging.info("创建一个存储答案的文档:{}".format(ANSFILEPATH))
+    fans = open(conf.ANSFILEPATH,'w',encoding='utf-8')    
+    logging.info("创建一个存储答案的文档:{}".format(conf.ANSFILEPATH))
     
     Matchallword ={};
     for path in Allpath:
@@ -49,7 +49,7 @@ def Run(Allpath , Keyword):
     MatchChooseWord = Matchallword.keys()
 
     #与用户交互确认答案
-    MatchAnsWord = interact.InteractUser(MatchChooseWord)
+    MatchAnsWord = interact.UserChoose(MatchChooseWord)
     
     if MatchAnsWord == []:
         #本轮匹配没有匹配到信息
