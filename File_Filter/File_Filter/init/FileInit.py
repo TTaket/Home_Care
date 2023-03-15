@@ -1,7 +1,7 @@
 import logging
 import os
 
-
+FILEPATH = "../../In/FilePaths.txt"
 #输入文件路径
 def FileInit_Mode1():
     logging.info("FileMode 为 交互输入")
@@ -19,4 +19,14 @@ def FileInit_Mode1():
 
 #读入文件路径
 def FileInit_Mode2():
-    pass
+    logging.info("FileMode 为 读入文件")
+    Files = []
+    f = open(FILEPATH,'r',encoding='utf-8')    
+    flist = f.read().splitlines()
+    for path in flist:
+        if len(path) == 0 or path[0] == '#':
+            continue;
+        Files.append(path)
+    print ("用户最后选择的路径为:{}".format(Files))
+    logging.info("用户选择的路径为:{}".format(Files))
+    return Files

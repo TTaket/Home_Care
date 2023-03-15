@@ -15,11 +15,13 @@ def Begin():
     logging.info("logging开始运行...")
 
     #文件的初始化
-    Files = init.File_Mode1()
+    #Files = init.File_Mode1()
+    Files = init.File_Mode2()
     logging.info("File开始运行...")
 
     #关键词的初始化
-    words = init.KeyWord_Mode1()
+    #words = init.KeyWord_Mode1()
+    words = init.KeyWord_Mode2()
     logging.info("KeyWord开始运行...")
     
 

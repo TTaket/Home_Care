@@ -1,28 +1,28 @@
-2023-03-15 15:43:44,428 - INFO  Begin : logging开始运行...
-2023-03-15 15:43:44,428 - INFO  FileInit_Mode1 : FileMode 为 交互输入
-2023-03-15 15:44:22,885 - INFO  FileInit_Mode1 : 用户选择的路径为:['/home/ljy/LJY/code-dir/Home_care/File_Filter/docs/1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/docs/2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/docs/3.txt']
-2023-03-15 15:44:22,886 - INFO  Begin : File开始运行...
-2023-03-15 15:44:22,886 - INFO  KeyWordInit_Mode1 : KeyWordMode 为 交互输入
-2023-03-15 15:44:30,715 - INFO  KeyWordInit_Mode1 : 用户最后选择的关键词为:['树', '你好', '1']
-2023-03-15 15:44:30,716 - INFO  Begin : KeyWord开始运行...
-2023-03-15 15:44:30,716 - INFO  Begin : 程序开始运行
-2023-03-15 15:44:30,716 - INFO  ParameterInvaild : path: ['/home/ljy/LJY/code-dir/Home_care/File_Filter/docs/1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/docs/2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/docs/3.txt'] , fstr: ['树', '你好', '1']
-2023-03-15 15:44:30,716 - INFO  Run : 参数校验通过
-2023-03-15 15:44:30,716 - INFO  Run : 创建一个存储答案的文档:../../out/File_Filter_ans.txt
-2023-03-15 15:44:30,717 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/docs/1.txt
-2023-03-15 15:44:30,717 - INFO  MatchWord : 传入的关键词集合： Keyword: ['树', '你好', '1']
-2023-03-15 15:44:30,717 - INFO  MatchWord : 添加关键词:树 其出现次数：22
-2023-03-15 15:44:30,718 - INFO  MatchWord : 添加关键词:1 其出现次数：122
-2023-03-15 15:44:30,718 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/docs/2.txt
-2023-03-15 15:44:30,718 - INFO  MatchWord : 传入的关键词集合： Keyword: ['树', '你好', '1']
-2023-03-15 15:44:30,718 - INFO  MatchWord : 添加关键词:你好 其出现次数：1
-2023-03-15 15:44:30,718 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/docs/3.txt
-2023-03-15 15:44:30,719 - INFO  MatchWord : 传入的关键词集合： Keyword: ['树', '你好', '1']
-2023-03-15 15:44:30,719 - INFO  MatchWord : 添加关键词:树 其出现次数：1
-2023-03-15 15:44:30,719 - INFO  ChooseWord : 匹配的关键词以及频率如下 :{'树': 23, '1': 122, '你好': 1}
-2023-03-15 15:44:30,719 - INFO  ChooseWord : 添加疑似关键词树
-2023-03-15 15:44:30,719 - INFO  ChooseWord : 添加疑似关键词1
-2023-03-15 15:44:30,719 - INFO  InteractUser : 选择的疑似关键词为关键词 :['树', '1']
-2023-03-15 15:44:33,413 - INFO  InteractUser : 用户确定的单词集合是: []
-2023-03-15 15:44:33,413 - INFO  Run : 关闭所有的文件
-2023-03-15 15:44:33,413 - INFO  Begin : 程序开始结束
+2023-03-15 16:19:04,945 - INFO  Begin : logging开始运行...
+2023-03-15 16:19:04,945 - INFO  FileInit_Mode2 : FileMode 为 交互输入
+2023-03-15 16:19:04,945 - INFO  FileInit_Mode2 : 用户选择的路径为:['../../In/Files/1.txt', '../../In/Files/2.txt', '../../In/Files/3.txt']
+2023-03-15 16:19:04,945 - INFO  Begin : File开始运行...
+2023-03-15 16:19:04,945 - INFO  KeyWordInit_Mode2 : KeyWordMode 为 文件读入
+2023-03-15 16:19:04,945 - INFO  KeyWordInit_Mode2 : 用户最后选择的关键词为:['树', '1', '你好']
+2023-03-15 16:19:04,945 - INFO  Begin : KeyWord开始运行...
+2023-03-15 16:19:04,945 - INFO  Begin : 程序开始运行
+2023-03-15 16:19:04,945 - INFO  ParameterInvaild : path: ['../../In/Files/1.txt', '../../In/Files/2.txt', '../../In/Files/3.txt'] , fstr: ['树', '1', '你好']
+2023-03-15 16:19:04,945 - INFO  Run : 参数校验通过
+2023-03-15 16:19:04,945 - INFO  Run : 创建一个存储答案的文档:../../out/File_Filter_ans.txt
+2023-03-15 16:19:04,945 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/1.txt
+2023-03-15 16:19:04,945 - INFO  MatchWord : 传入的关键词集合： Keyword: ['树', '1', '你好']
+2023-03-15 16:19:04,946 - INFO  MatchWord : 添加关键词:树 其出现次数：22
+2023-03-15 16:19:04,946 - INFO  MatchWord : 添加关键词:1 其出现次数：122
+2023-03-15 16:19:04,946 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/2.txt
+2023-03-15 16:19:04,946 - INFO  MatchWord : 传入的关键词集合： Keyword: ['树', '1', '你好']
+2023-03-15 16:19:04,946 - INFO  MatchWord : 添加关键词:你好 其出现次数：1
+2023-03-15 16:19:04,946 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/3.txt
+2023-03-15 16:19:04,946 - INFO  MatchWord : 传入的关键词集合： Keyword: ['树', '1', '你好']
+2023-03-15 16:19:04,946 - INFO  MatchWord : 添加关键词:树 其出现次数：1
+2023-03-15 16:19:04,946 - INFO  ChooseWord : 匹配的关键词以及频率如下 :{'树': 23, '1': 122, '你好': 1}
+2023-03-15 16:19:04,946 - INFO  ChooseWord : 添加疑似关键词树
+2023-03-15 16:19:04,946 - INFO  ChooseWord : 添加疑似关键词1
+2023-03-15 16:19:04,946 - INFO  InteractUser : 选择的疑似关键词为关键词 :['树', '1']
+2023-03-15 16:19:09,483 - INFO  InteractUser : 用户确定的单词集合是: []
+2023-03-15 16:19:09,483 - INFO  Run : 关闭所有的文件
+2023-03-15 16:19:09,483 - INFO  Begin : 程序开始结束
