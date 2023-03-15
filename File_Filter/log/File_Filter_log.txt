@@ -1,0 +1,26 @@
+2023-03-15 12:59:47,873 - INFO  Begin : logging开始运行...
+2023-03-15 13:00:06,338 - INFO  Begin : 用户选择的路径为:['/home/ljy/LJY/code-dir/Home_care/File_Fiilter/docs/1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Fiilter/docs/2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Fiilter/docs/3.txt']
+2023-03-15 13:00:12,326 - INFO  Begin : 用户最后选择的关键词为:['你好', '树', '1']
+2023-03-15 13:00:12,326 - INFO  Begin : 程序开始运行
+2023-03-15 13:00:12,326 - INFO  ParameterInvaild : path: ['/home/ljy/LJY/code-dir/Home_care/File_Fiilter/docs/1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Fiilter/docs/2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Fiilter/docs/3.txt'] , fstr: ['你好', '树', '1']
+2023-03-15 13:00:12,327 - INFO  Run : 参数校验通过
+2023-03-15 13:00:12,327 - INFO  Run : 创建一个存储答案的文档:../../out/File_Filter_ans.txt
+2023-03-15 13:00:12,327 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Fiilter/docs/1.txt
+2023-03-15 13:00:12,327 - INFO  MatchWord : 传入的关键词集合： Keyword: ['你好', '树', '1']
+2023-03-15 13:00:12,328 - INFO  MatchWord : 添加关键词:树 其出现次数：22
+2023-03-15 13:00:12,328 - INFO  MatchWord : 添加关键词:1 其出现次数：122
+2023-03-15 13:00:12,328 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Fiilter/docs/2.txt
+2023-03-15 13:00:12,328 - INFO  MatchWord : 传入的关键词集合： Keyword: ['你好', '树', '1']
+2023-03-15 13:00:12,328 - INFO  MatchWord : 添加关键词:你好 其出现次数：1
+2023-03-15 13:00:12,329 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Fiilter/docs/3.txt
+2023-03-15 13:00:12,329 - INFO  MatchWord : 传入的关键词集合： Keyword: ['你好', '树', '1']
+2023-03-15 13:00:12,329 - INFO  MatchWord : 添加关键词:树 其出现次数：1
+2023-03-15 13:00:12,329 - INFO  ChooseWord : 匹配的关键词以及频率如下 :{'树': 23, '1': 122, '你好': 1}
+2023-03-15 13:00:12,329 - INFO  ChooseWord : 添加疑似关键词树
+2023-03-15 13:00:12,329 - INFO  ChooseWord : 添加疑似关键词1
+2023-03-15 13:00:12,329 - INFO  InteractUser : 选择的疑似关键词为关键词 :['树', '1']
+2023-03-15 13:00:15,352 - INFO  InteractUser : 用户确定的单词集合是: ['树', '1']
+2023-03-15 13:00:15,352 - INFO  Run : 写入答案的数据信息: Data    1:2023-03-15 13:00:15: 	MatchWord:树
+2023-03-15 13:00:15,352 - INFO  Run : 写入答案的数据信息: Data    2:2023-03-15 13:00:15: 	MatchWord:1
+2023-03-15 13:00:15,353 - INFO  Run : 关闭所有的文件
+2023-03-15 13:00:15,353 - INFO  Begin : 程序开始结束
