@@ -20,6 +20,8 @@ def InteractUser(match_chooseword):
         else:
             OK = 0
             RetWord.append(Check_word)
+            #找到第一个匹配的关键词就退出
+            break
         print ("你的选择是: {}".format(OK))
         print ("------------------------\n")
     
