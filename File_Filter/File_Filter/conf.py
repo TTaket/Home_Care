@@ -14,6 +14,9 @@ class Customization_Error(RuntimeError):
 # 输入文件路径
 FILEPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + "/In/FilePaths.txt"
 
+# 真实文件位置
+FILESPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + "/In/Files/"
+
 # 输出订单号路径
 ANSFILEPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + "/out/File_Filter_ans.txt"
 
@@ -29,7 +32,6 @@ DEMANDINFOPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 关键词路径
 KEYWORDPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) +"/In/KeyWords.txt"
 
-# In路径
+# BASE路径
 BASEPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 

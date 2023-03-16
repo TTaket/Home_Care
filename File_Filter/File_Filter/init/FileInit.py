@@ -21,7 +21,6 @@ def FileInit_Mode1():
 def FileInit_Mode2():
     logging.info("FileMode 为 读入文件")
     Files = []
-    print (conf.FILEPATH)
     f = open(conf.FILEPATH,'r',encoding='utf-8')    
     flist = f.read().splitlines()
     for path in flist:
