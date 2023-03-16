@@ -28,3 +28,13 @@
 ## 4. 测试结果
 
 ## 5. 使用方法
+
+1. 对外API： Begin()
+
+
+1. 把输入文件导入到 In/Files 目录
+2. 把选中的文件在In/FilePaths中进行路径设定
+3. 把用户 id 导入到 In/UseInfo
+4. 把关键词导入到 In/KeyWords
+5. 把关键词对应id 导入到In/DemandInfo
+6. 最后运行File_Filter.Begin()
