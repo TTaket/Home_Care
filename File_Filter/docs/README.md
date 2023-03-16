@@ -32,33 +32,35 @@
 
 ## 5. 使用方法
 
-1. 所有的输入路径根路径为File_Filter根目录
+1. 所有的输入路径根路径为 File_Filter 根目录
 2. 所有的导入文件的注释在开头'#'
 
 MODE1 交互式输入路径
 
 ---
 
-MODE2 API导入
+MODE2 API 导入
 
-1. Begin(FileMode = 2 ,KeyWordMode = 2) 1 为交互式输入的方式 2 为文件输入的方式 默认下为 2
-3. End() 卸载所有的导入包
-4. UnInstall() 卸载所有的导入包
-5. SetKeyWords() 配置导入的关键词
-6. SetDemandInfo() 配置导入的需求词
-7. SetFile() 配置导入的文件
-8. SetUserInfo() 配置导入的用户信息
+- Begin(FileMode = 2 ,KeyWordMode = 2)
+  - 1 为交互式输入的方式 2 为文件输入的方式 默认下为 2
+  - 返回的是一系列的用于 Run 的参数字典
+- Run()运行程序 传入参数是 Begin 的返回字典
+- End() 卸载所有的导入包
+- SetKeyWords() 配置导入的关键词
+- SetDemandInfo() 配置导入的需求词
+- SetFile() 配置导入的文件
+- SetUserInfo() 配置导入的用户信息
 
 ---
 
 MODE2 手动导入
 
 1. 把输入文件导入到 In/Files 目录
-3. 把选中的文件在 In/FilePaths 中进行路径设定
-4. 把用户 id 导入到 In/UseInfo
-5. 把关键词导入到 In/KeyWords
-6. 把关键词对应 id 导入到 In/DemandInfo
-7. 最后运行 File_Filter.Begin()
+2. 把选中的文件在 In/FilePaths 中进行路径设定
+3. 把用户 id 导入到 In/UseInfo
+4. 把关键词导入到 In/KeyWords
+5. 把关键词对应 id 导入到 In/DemandInfo
+6. 最后运行 File_Filter.Begin()
 
 ## 6.标准导入文件格式
 
@@ -66,9 +68,11 @@ MODE2 手动导入
 
    1. `ID的格式xx为id号码 暂定10位 系统会截取后6位`
    2. `yyy-xxx` yyy 为用户信息的键 xxx 为值
+
 2. KeyWords
 
    1. 直接每行一个关键词即可
+
 3. DemandInfo
 
    1. yyy 为三位

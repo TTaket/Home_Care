@@ -8,10 +8,15 @@ from conf import Customization_Error
 
 
 #主体运行程序
-def Run(FilePaths , Keyword , UserInfo_dic , DemandInfo_dic):
+def Run(Begin_dic):
+    FilePaths =  Begin_dic["FilePaths"]
+    Keywords = Begin_dic["KeyWords"]
+    UserInfo_dic =Begin_dic["UserInfo"]
+    DemandInfo_dic = Begin_dic["DemandInfo"]
+     
     #首先进行参数校验
     try:
-        handle.ParameterInvaild(FilePaths , Keyword ,UserInfo_dic , DemandInfo_dic)
+        handle.ParameterInvaild(FilePaths , Keywords ,UserInfo_dic , DemandInfo_dic)
     except Customization_Error as err:
         logging.error(err.info)
         print (err.info)
@@ -31,7 +36,7 @@ def Run(FilePaths , Keyword , UserInfo_dic , DemandInfo_dic):
         logging.info("打开的文件路径:{}".format(os.path.abspath(path)))
         
         #对文本中出现的关键字进行频率调查
-        Now_Matchallword = handle.MatchWord(finfo,Keyword)
+        Now_Matchallword = handle.MatchWord(finfo,Keywords)
         #Todo: 存在并发问题 需上锁
         for k,v in Now_Matchallword.items():
             All_num = Matchallword.get(k)

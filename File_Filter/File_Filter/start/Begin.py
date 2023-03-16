@@ -9,7 +9,6 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
 import conf
 import init
-import Run
 
 #程序运行入口
 #可支持开启时设置运行模式 默认文档读入
@@ -19,9 +18,7 @@ def Begin(FileMode=2 ,KeyWordMode =2):
     #改变工作路径
     os.chdir(conf.BASEPATH)
 
-    #Find_Flag 表示是否找到对应的关键词
-    Find_Flag = False
-
+    Begin_dic = {}
     #logging 的初始化
     init.Log()
     logging.info("logging开始运行...")
@@ -53,9 +50,11 @@ def Begin(FileMode=2 ,KeyWordMode =2):
 
     #需求列表初始化
     DemandInfo_dic = init.DemandInfo()
-    
-    #启动程序
-    Find_Flag = Run.Run(Files , words , UserInfo_dic , DemandInfo_dic)
+
+    Begin_dic.update({"FilePaths":Files})
+    Begin_dic.update({"KeyWords":words})
+    Begin_dic.update({"UserInfo":UserInfo_dic})
+    Begin_dic.update({"DemandInfo":DemandInfo_dic})
 
     print ("程序运行结束")
-    return Find_Flag
+    return Begin_dic

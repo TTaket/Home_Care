@@ -8,5 +8,8 @@ File_Filter.SetKeyWords("../testfile/KeyWords.txt")
 File_Filter.SetFile("../testfile/Files/test_1.txt")
 File_Filter.SetFile("../testfile/Files/test_2.txt")
 File_Filter.SetFile("../testfile/Files/test_3.txt")
-File_Filter.Begin()
-File_Filter.End()
+Begin_dic = File_Filter.Begin()
+# Flag = False
+# while Flag == False:
+#     Flag = File_Filter.Run(Begin_dic)
+# File_Filter.End()

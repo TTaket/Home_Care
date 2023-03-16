@@ -1,7 +1,8 @@
 from . import File_Filter
 
-#提供 begin的API
+#提供 启动相关 的API
 Begin = File_Filter.Begin
+Run = File_Filter.Run
 End = File_Filter.End
 
 #提供InFile 的API

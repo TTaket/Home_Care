@@ -1,7 +1,6 @@
 import os
 import conf
 import logging
-import glob
 
 def UnInstall():
     
@@ -12,6 +11,8 @@ def UnInstall():
         if len(path) == 0 or path[0] == '#':
             continue;
         os.remove(path)    
+        logging.info("删除{}".format(path))
+    f.close()
         
     #删除需求文件
     os.remove(conf.DEMANDINFOPATH)
@@ -27,4 +28,4 @@ def UnInstall():
     
     #删除文件目录
     os.remove(conf.FILEPATH)
-    logging.info("删除{}".format(conf.FILESPATH))
+    logging.info("删除{}".format(conf.FILEPATH))
