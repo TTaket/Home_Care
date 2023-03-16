@@ -1,3 +1,3 @@
-import start.Begin
+from . import Begin
 
-Begin = start.Begin.Begin
+Begin = Begin.Begin

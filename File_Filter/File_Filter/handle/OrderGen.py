@@ -1,6 +1,10 @@
 import time
 import conf
 
+
+#OrderGen
+#传入关键词
+#传出的是订单号 OrderID
 def OrderGen(keyword):
     #读取用户信息
     f_User = open(conf.USERINFOPATH , 'r' ,encoding='utf-8' )

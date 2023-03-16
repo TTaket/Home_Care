@@ -53,7 +53,7 @@ def Run(Allpath , Keyword):
     
     if MatchAnsWord == []:
         #本轮匹配没有匹配到信息
-        print ("本轮匹配没有匹配到合法的关键词 请您重新进行语音输入")
+        #print ("本轮匹配没有匹配到合法的关键词 请您重新进行语音输入")
         return False
     else:
         #本轮匹配匹配到信息 即将放到答案文件

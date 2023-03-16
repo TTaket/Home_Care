@@ -1,3 +1,0 @@
-import start
-
-start.Begin()
