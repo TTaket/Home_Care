@@ -4,18 +4,19 @@ import logging
 import handle 
 import interact
 import conf
-from handle.ParameterInvaild import Customization_Error
+from conf import Customization_Error 
 
 
 
 
 #主体运行程序
-def Run(Allpath , Keyword):
+def Run(FilePaths , Keyword , UserInfo_dic , DemandInfo_dic):
     #首先进行参数校验
     try:
-        handle.ParameterInvaild(Allpath , Keyword)
+        handle.ParameterInvaild(FilePaths , Keyword ,UserInfo_dic , DemandInfo_dic)
     except Customization_Error as err:
         logging.error(err.info)
+        print (err.info)
         exit
     else:
         logging.info("参数校验通过")
@@ -25,7 +26,7 @@ def Run(Allpath , Keyword):
     logging.info("创建一个存储答案的文档:{}".format(conf.ANSFILEPATH))
     
     Matchallword ={};
-    for path in Allpath:
+    for path in FilePaths:
         #打开源文件并且转换为行链表
         f = open(path,'r',encoding='utf-8')
         finfo = f.read()
@@ -54,10 +55,18 @@ def Run(Allpath , Keyword):
     if MatchAnsWord == []:
         #本轮匹配没有匹配到信息
         #print ("本轮匹配没有匹配到合法的关键词 请您重新进行语音输入")
+        logging.info("没有匹配到信息")
         return False
     else:
         #本轮匹配匹配到信息 即将放到答案文件
-        OrderInfo = handle.OrderGen(MatchAnsWord[0])
+        try:
+            OrderInfo = handle.OrderGen(MatchAnsWord[0] ,UserInfo_dic , DemandInfo_dic)
+        except Customization_Error as err:
+            logging.error(err.info)
+            print (err.info)
+            exit
+        else:
+            logging.info("订单号生成成功")
         fans.write("{}\n".format(OrderInfo))
         logging.info("即将发送的数据信息: {}".format(OrderInfo))
     

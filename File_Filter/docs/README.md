@@ -6,6 +6,8 @@
 
 1.1 把提取出来的关键词经过一定包装 和时间和用户信息 包装成订单信息
 
+1.2 添加了可支持的功能选择 优化文件结构
+
 ## 2. 文件结构
 
 1. docs 存放一些文档 还有下一步的发展方向与问题
@@ -24,17 +26,22 @@
 - 支持自定义关键词选择逻辑
 - 人机交互确认
 - 较为完整的 log 日志
+- 可根据入参选择模式
 
 ## 4. 测试结果
 
 ## 5. 使用方法
 
-1. 对外API： Begin()
+1. 对外 API： Begin(FileMode = 2 ,KeyWordMode = 2) 1为交互式输入的方式 2为文件输入的方式 默认下为2
+2. Begin支持两个参数
+
+---
+
 
 
 1. 把输入文件导入到 In/Files 目录
-2. 把选中的文件在In/FilePaths中进行路径设定
-3. 把用户 id 导入到 In/UseInfo
-4. 把关键词导入到 In/KeyWords
-5. 把关键词对应id 导入到In/DemandInfo
-6. 最后运行File_Filter.Begin()
+4. 把选中的文件在 In/FilePaths 中进行路径设定
+5. 把用户 id 导入到 In/UseInfo
+6. 把关键词导入到 In/KeyWords
+7. 把关键词对应 id 导入到 In/DemandInfo
+8. 最后运行 File_Filter.Begin()

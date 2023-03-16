@@ -1,5 +1,16 @@
 import os
 
+#用户自定义错误
+#Customization error
+#Using: 
+#    Customization_Error(problem)
+class Customization_Error(RuntimeError):
+    def __init__(self , arg):
+        self.info = arg
+    def __str__(self):
+        return str(self.info)
+
+
 # 输入文件路径
 FILEPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + "/In/FilePaths.txt"
 
@@ -19,6 +30,6 @@ DEMANDINFOPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KEYWORDPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) +"/In/KeyWords.txt"
 
 # In路径
-INPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) +"/In"
+BASEPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 

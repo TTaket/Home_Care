@@ -1,0 +1,30 @@
+2023-03-16 20:52:47,530 - INFO  Begin : logging开始运行...
+2023-03-16 20:52:47,530 - INFO  FileInit_Mode2 : FileMode 为 读入文件
+2023-03-16 20:52:47,530 - INFO  FileInit_Mode2 : 用户选择的路径为:['./In/Files/test_1.txt', './In/Files/test_2.txt', './In/Files/test_3.txt']
+2023-03-16 20:52:47,530 - INFO  Begin : File开始运行...
+2023-03-16 20:52:47,530 - INFO  KeyWordInit_Mode2 : KeyWordMode 为 文件读入
+2023-03-16 20:52:47,530 - INFO  KeyWordInit_Mode2 : 用户最后选择的关键词为:['吃饭', '洗澡']
+2023-03-16 20:52:47,530 - INFO  Begin : KeyWord开始运行...
+2023-03-16 20:52:47,530 - INFO  UserInfoInit : 生成的UserInfo信息为:
+2023-03-16 20:52:47,530 - INFO  DemandInfoInit : 生成的DemandInfo信息为:
+2023-03-16 20:52:47,530 - INFO  ParameterInvaild : path: ['./In/Files/test_1.txt', './In/Files/test_2.txt', './In/Files/test_3.txt'] , KeyWords: ['吃饭', '洗澡']
+2023-03-16 20:52:47,530 - INFO  ParameterInvaild : UserInfo_dic: {'ID': '2104010209', 'NAME': 'testuser01'} , DemandInfo_dic: {'吃饭': '101', '洗澡': '102'}
+2023-03-16 20:52:47,530 - INFO  Run : 参数校验通过
+2023-03-16 20:52:47,530 - INFO  Run : 创建一个存储答案的文档:/home/ljy/LJY/code-dir/Home_care/File_Filter/out/File_Filter_ans.txt
+2023-03-16 20:52:47,530 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt
+2023-03-16 20:52:47,531 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
+2023-03-16 20:52:47,531 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt
+2023-03-16 20:52:47,531 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
+2023-03-16 20:52:47,531 - INFO  MatchWord : 添加关键词:吃饭 其出现次数：1
+2023-03-16 20:52:47,531 - INFO  MatchWord : 添加关键词:洗澡 其出现次数：1
+2023-03-16 20:52:47,531 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt
+2023-03-16 20:52:47,531 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
+2023-03-16 20:52:47,531 - INFO  InteractUser : 选择的疑似关键词为关键词 :dict_keys(['吃饭', '洗澡'])
+2023-03-16 20:52:49,378 - INFO  InteractUser : 用户确定的单词集合是: ['吃饭']
+2023-03-16 20:52:49,378 - INFO  OrderGen : 获取的用户ID 为010209
+2023-03-16 20:52:49,378 - INFO  OrderGen : 获取的需求ID 为101
+2023-03-16 20:52:49,378 - INFO  OrderGen : 获取的时间 为230316205249
+2023-03-16 20:52:49,378 - INFO  OrderGen : 生成的OrderID 为230316205249010209101
+2023-03-16 20:52:49,378 - INFO  Run : 订单号生成成功
+2023-03-16 20:52:49,379 - INFO  Run : 即将发送的数据信息: 230316205249010209101
+2023-03-16 20:52:49,379 - INFO  Run : 关闭所有的文件

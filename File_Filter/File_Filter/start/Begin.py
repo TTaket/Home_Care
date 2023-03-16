@@ -12,12 +12,12 @@ import init
 import Run
 
 #程序运行入口
+#可支持开启时设置运行模式 默认文档读入
 #返回是否找到对应的关键词
-def Begin():
+def Begin(FileMode=2 ,KeyWordMode =2):
     print ("程序开始运行")
-    logging.info("程序开始运行")
     #改变工作路径
-    os.chdir(conf.INPATH)
+    os.chdir(conf.BASEPATH)
 
     #Find_Flag 表示是否找到对应的关键词
     Find_Flag = False
@@ -25,20 +25,37 @@ def Begin():
     #logging 的初始化
     init.Log()
     logging.info("logging开始运行...")
-
+    
     #文件的初始化
-    #Files = init.File_Mode1()
-    Files = init.File_Mode2()
+    if FileMode == 1:
+        Files = init.File_Mode1()
+    elif FileMode == 2:
+        Files = init.File_Mode2()
+    else:
+        #TODO： 可用异常去升级
+        print ("错误的文件模式")
+        exit
     logging.info("File开始运行...")
 
     #关键词的初始化
-    #words = init.KeyWord_Mode1()
-    words = init.KeyWord_Mode2()
+    if KeyWordMode == 1:
+        words = init.KeyWord_Mode1()
+    elif KeyWordMode == 2:
+        words = init.KeyWord_Mode2()
+    else:
+        #TODO： 可用异常去升级
+        print ("错误的关键词模式")
+        exit
     logging.info("KeyWord开始运行...")
         
+    #用户信息初始化
+    UserInfo_dic = init.UserInfo()
+
+    #需求列表初始化
+    DemandInfo_dic = init.DemandInfo()
+    
     #启动程序
-    Find_Flag = Run.Run(Files , words)
+    Find_Flag = Run.Run(Files , words , UserInfo_dic , DemandInfo_dic)
 
     print ("程序运行结束")
-    logging.info("程序开始结束")
     return Find_Flag

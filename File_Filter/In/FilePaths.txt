@@ -1,6 +1,6 @@
 #测试的文档路径
-#以In文档为基础
+#以根目录为基础
 #如果想要注释掉必须顶格添加‘#’
-./Files/test_1.txt
-./Files/test_2.txt
-./Files/test_3.txt
+./In/Files/test_1.txt
+./In/Files/test_2.txt
+./In/Files/test_3.txt
