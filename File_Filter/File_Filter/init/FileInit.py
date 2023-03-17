@@ -12,8 +12,6 @@ def FileInit_Mode1():
             break
         else:
             Files.append(os.path.abspath(Path))
-    print ("用户最后选择的路径为:{}".format(Files))
-    logging.info("用户选择的路径为:{}".format(Files))
     return Files
 
 
@@ -27,6 +25,4 @@ def FileInit_Mode2():
         if len(path) == 0 or path[0] == '#':
             continue;
         Files.append(path)
-    print ("用户最后选择的路径为:{}".format(Files))
-    logging.info("用户选择的路径为:{}".format(Files))
     return Files

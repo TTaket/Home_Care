@@ -11,3 +11,8 @@ SetDemandInfo = File_Filter.SetDemandInfo
 SetFile = File_Filter.SetFile
 SetUserInfo = File_Filter.SetUserInfo
 
+#清除 导入文件 
+Clear = File_Filter.Clear
+
+
+

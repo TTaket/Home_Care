@@ -12,8 +12,6 @@ def KeyWordInit_Mode1():
             break
         else:
             words.append(word)
-    print ("用户最后选择的关键词为:{}".format(words))
-    logging.info("用户最后选择的关键词为:{}".format(words))
     return words
 
 #读入关键词
@@ -26,6 +24,4 @@ def KeyWordInit_Mode2():
         if len(word) == 0 or word[0] == '#':
             continue;
         words.append(word)
-    print ("用户最后选择的关键词为:{}".format(words))
-    logging.info("用户最后选择的关键词为:{}".format(words))
     return words

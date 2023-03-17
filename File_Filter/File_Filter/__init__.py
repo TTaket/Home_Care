@@ -1,5 +1,7 @@
 from . import start
 from . import InFile
+from . import environment
+
 
 #对外只提供初始化配置的接口
 Begin = start.Begin
@@ -13,4 +15,8 @@ SetKeyWords = InFile.SetKeyWords
 SetDemandInfo = InFile.SetDemandInfo
 SetFile = InFile.SetFile
 SetUserInfo = InFile.SetUserInfo
+
+#提供清除导入文件的接口
+Clear = InFile.ClearInFile
+
 

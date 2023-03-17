@@ -13,5 +13,4 @@ def UserInfoInit():
         else:
             tmplist = tmpinfo.split("-")
             UserInfo_dic.update({tmplist[0] : tmplist[1]})
-    logging.info("生成的UserInfo信息为:",UserInfo_dic)
     return UserInfo_dic

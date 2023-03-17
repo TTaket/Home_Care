@@ -9,10 +9,11 @@ from conf import Customization_Error
 
 #主体运行程序
 def Run(Begin_dic):
-    FilePaths =  Begin_dic["FilePaths"]
-    Keywords = Begin_dic["KeyWords"]
-    UserInfo_dic =Begin_dic["UserInfo"]
-    DemandInfo_dic = Begin_dic["DemandInfo"]
+    #拆包
+    FilePaths =  Begin_dic.FilePaths
+    Keywords = Begin_dic.KeyWords
+    UserInfo_dic =Begin_dic.UserInfo
+    DemandInfo_dic = Begin_dic.DemandInfo
      
     #首先进行参数校验
     try:
@@ -30,7 +31,7 @@ def Run(Begin_dic):
     
     Matchallword ={};
     for path in FilePaths:
-        #打开源文件并且转换为行链表
+        #打开导入文件
         f = open(path,'r',encoding='utf-8')
         finfo = f.read()
         logging.info("打开的文件路径:{}".format(os.path.abspath(path)))
@@ -58,6 +59,7 @@ def Run(Begin_dic):
     if MatchAnsWord == []:
         #本轮匹配没有匹配到信息
         #print ("本轮匹配没有匹配到合法的关键词 请您重新进行语音输入")
+        print ("本轮并没有匹配到信息")
         logging.info("没有匹配到信息")
         return False
     else:
@@ -69,6 +71,7 @@ def Run(Begin_dic):
             print (err.info)
             exit
         else:
+            print ("订单号生成成功")
             logging.info("订单号生成成功")
         fans.write("{}\n".format(OrderInfo))
         logging.info("即将发送的数据信息: {}".format(OrderInfo))

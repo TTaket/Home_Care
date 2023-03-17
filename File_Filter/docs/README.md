@@ -50,6 +50,7 @@ MODE2 API 导入
 - SetDemandInfo() 配置导入的需求词
 - SetFile() 配置导入的文件
 - SetUserInfo() 配置导入的用户信息
+- Clear() 删除导入的文件
 
 ---
 

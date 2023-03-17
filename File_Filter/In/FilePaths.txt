@@ -1,3 +1,0 @@
-/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt
-/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt
-/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt

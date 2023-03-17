@@ -4,8 +4,7 @@ import logging
 import shutil
 
 def SetUserInfo(FilePath):
-    #改变工作路径
-    os.chdir(conf.BASEPATH)
+
     #尝试验证该路径是否能够正常打开和读取内容
     FilePath = os.path.abspath(FilePath)
     flag1 = os.path.exists(FilePath)
@@ -20,5 +19,5 @@ def SetUserInfo(FilePath):
     target = conf.USERINFOPATH
 
     shutil.copyfile(source, target)
-    print ("UserInfo导入成功")    
-    logging.info("UserInfo导入成功")
+    print ("{}导入成功".format(target))    
+    logging.info("{}导入成功".format(target))

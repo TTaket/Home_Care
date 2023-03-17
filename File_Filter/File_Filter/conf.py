@@ -10,6 +10,13 @@ class Customization_Error(RuntimeError):
     def __str__(self):
         return str(self.info)
 
+class Begin_Info():
+    FilePaths = {},
+    KeyWords = {},
+    UserInfo = {},
+    DemandInfo = {},
+
+
 
 # 输入文件路径
 FILEPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + "/In/FilePaths.txt"

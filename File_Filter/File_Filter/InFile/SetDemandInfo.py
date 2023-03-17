@@ -4,8 +4,6 @@ import logging
 import shutil
 
 def SetDemandInfo(FilePath):
-    #改变工作路径
-    os.chdir(conf.BASEPATH)
     #尝试验证该路径是否能够正常打开和读取内容
     FilePath = os.path.abspath(FilePath)
     flag1 = os.path.exists(FilePath)
@@ -20,5 +18,5 @@ def SetDemandInfo(FilePath):
     target = conf.DEMANDINFOPATH
 
     shutil.copyfile(source, target)
-    print ("DemandInfo导入成功")    
-    logging.info("DemandInfo导入成功")
+    print ("{}导入成功".format(target))    
+    logging.info("{}导入成功".format(target))
