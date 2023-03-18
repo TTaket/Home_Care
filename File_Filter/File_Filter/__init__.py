@@ -1,5 +1,5 @@
 from . import start
-from . import InFile
+from . import InAndOut
 from . import environment
 
 
@@ -10,13 +10,18 @@ Run = start.Run
 #对外提供关闭的接口
 End = start.End
 
-#提供InFile 的API
-SetKeyWords = InFile.SetKeyWords
-SetDemandInfo = InFile.SetDemandInfo
-SetFile = InFile.SetFile
-SetUserInfo = InFile.SetUserInfo
+#提供导入 的API
+SetKeyWords = InAndOut.SetKeyWords
+SetDemandInfo = InAndOut.SetDemandInfo
+SetFile = InAndOut.SetFile
+SetUserInfo = InAndOut.SetUserInfo
 
 #提供清除导入文件的接口
-Clear = InFile.ClearInFile
+ClearInFile = InAndOut.ClearInFile
+ClearOutFile = InAndOut.ClearOutFile
+
+#导出文件 
+OutFile = InAndOut.OutFile
+
 
 

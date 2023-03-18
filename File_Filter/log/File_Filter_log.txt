@@ -1,118 +1,60 @@
-2023-03-17 15:16:12,039 - INFO  <module> : logging开始运行...
-2023-03-17 15:16:12,039 - INFO  SetDemandInfo : /home/ljy/LJY/code-dir/Home_care/File_Filter/In/DemandInfo.txt导入成功
-2023-03-17 15:16:12,039 - INFO  SetUserInfo : /home/ljy/LJY/code-dir/Home_care/File_Filter/In/UserInfo.txt导入成功
-2023-03-17 15:16:12,039 - INFO  SetKeyWords : /home/ljy/LJY/code-dir/Home_care/File_Filter/In/KeyWords.txt导入成功
-2023-03-17 15:16:12,039 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt
-2023-03-17 15:16:12,040 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt 导入成功
-2023-03-17 15:16:12,040 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt
-2023-03-17 15:16:12,040 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt 导入成功
-2023-03-17 15:16:12,040 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt
-2023-03-17 15:16:12,040 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt 导入成功
-2023-03-17 15:16:12,040 - INFO  FileInit_Mode2 : FileMode 为 读入文件
-2023-03-17 15:16:12,040 - INFO  Begin : File初始化结果['/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt']
-2023-03-17 15:16:12,040 - INFO  KeyWordInit_Mode2 : KeyWordMode 为 文件读入
-2023-03-17 15:16:12,040 - INFO  Begin : KeyWord初始化结果['吃饭', '洗澡']
-2023-03-17 15:16:12,040 - INFO  Begin : UserInfo初始化结果{'ID': '2104010209', 'NAME': 'testuser01'}
-2023-03-17 15:16:12,040 - INFO  DemandInfoInit : 生成的DemandInfo信息为:
-2023-03-17 15:16:12,040 - INFO  Begin : DemandInfo初始化结果{'吃饭': '101', '洗澡': '102'}
-2023-03-17 15:16:12,040 - INFO  ParameterInvaild : path: ['/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt'] , KeyWords: ['吃饭', '洗澡']
-2023-03-17 15:16:12,040 - INFO  ParameterInvaild : UserInfo_dic: {'ID': '2104010209', 'NAME': 'testuser01'} , DemandInfo_dic: {'吃饭': '101', '洗澡': '102'}
-2023-03-17 15:16:12,040 - INFO  Run : 参数校验通过
-2023-03-17 15:16:12,040 - INFO  Run : 创建一个存储答案的文档:/home/ljy/LJY/code-dir/Home_care/File_Filter/out/File_Filter_ans.txt
-2023-03-17 15:16:12,040 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt
-2023-03-17 15:16:12,041 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:16:12,041 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt
-2023-03-17 15:16:12,041 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:16:12,041 - INFO  MatchWord : 添加关键词:吃饭 其出现次数：1
-2023-03-17 15:16:12,041 - INFO  MatchWord : 添加关键词:洗澡 其出现次数：1
-2023-03-17 15:16:12,041 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt
-2023-03-17 15:16:12,041 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:16:12,041 - INFO  InteractUser : 选择的疑似关键词为关键词 :dict_keys(['吃饭', '洗澡'])
-2023-03-17 15:18:24,816 - INFO  InteractUser : 用户确定的单词集合是: []
-2023-03-17 15:18:24,816 - INFO  Run : 没有匹配到信息
-2023-03-17 15:18:24,816 - INFO  ParameterInvaild : path: ['/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt'] , KeyWords: ['吃饭', '洗澡']
-2023-03-17 15:18:24,817 - INFO  ParameterInvaild : UserInfo_dic: {'ID': '2104010209', 'NAME': 'testuser01'} , DemandInfo_dic: {'吃饭': '101', '洗澡': '102'}
-2023-03-17 15:18:24,817 - INFO  Run : 参数校验通过
-2023-03-17 15:18:24,817 - INFO  Run : 创建一个存储答案的文档:/home/ljy/LJY/code-dir/Home_care/File_Filter/out/File_Filter_ans.txt
-2023-03-17 15:18:24,817 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt
-2023-03-17 15:18:24,817 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:24,817 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt
-2023-03-17 15:18:24,817 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:24,817 - INFO  MatchWord : 添加关键词:吃饭 其出现次数：1
-2023-03-17 15:18:24,817 - INFO  MatchWord : 添加关键词:洗澡 其出现次数：1
-2023-03-17 15:18:24,817 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt
-2023-03-17 15:18:24,817 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:24,817 - INFO  InteractUser : 选择的疑似关键词为关键词 :dict_keys(['吃饭', '洗澡'])
-2023-03-17 15:18:25,570 - INFO  InteractUser : 用户确定的单词集合是: []
-2023-03-17 15:18:25,571 - INFO  Run : 没有匹配到信息
-2023-03-17 15:18:25,571 - INFO  ParameterInvaild : path: ['/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt'] , KeyWords: ['吃饭', '洗澡']
-2023-03-17 15:18:25,571 - INFO  ParameterInvaild : UserInfo_dic: {'ID': '2104010209', 'NAME': 'testuser01'} , DemandInfo_dic: {'吃饭': '101', '洗澡': '102'}
-2023-03-17 15:18:25,571 - INFO  Run : 参数校验通过
-2023-03-17 15:18:25,571 - INFO  Run : 创建一个存储答案的文档:/home/ljy/LJY/code-dir/Home_care/File_Filter/out/File_Filter_ans.txt
-2023-03-17 15:18:25,571 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt
-2023-03-17 15:18:25,571 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:25,571 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt
-2023-03-17 15:18:25,571 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:25,571 - INFO  MatchWord : 添加关键词:吃饭 其出现次数：1
-2023-03-17 15:18:25,571 - INFO  MatchWord : 添加关键词:洗澡 其出现次数：1
-2023-03-17 15:18:25,571 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt
-2023-03-17 15:18:25,571 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:25,571 - INFO  InteractUser : 选择的疑似关键词为关键词 :dict_keys(['吃饭', '洗澡'])
-2023-03-17 15:18:26,045 - INFO  InteractUser : 用户确定的单词集合是: []
-2023-03-17 15:18:26,045 - INFO  Run : 没有匹配到信息
-2023-03-17 15:18:26,045 - INFO  ParameterInvaild : path: ['/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt'] , KeyWords: ['吃饭', '洗澡']
-2023-03-17 15:18:26,045 - INFO  ParameterInvaild : UserInfo_dic: {'ID': '2104010209', 'NAME': 'testuser01'} , DemandInfo_dic: {'吃饭': '101', '洗澡': '102'}
-2023-03-17 15:18:26,046 - INFO  Run : 参数校验通过
-2023-03-17 15:18:26,046 - INFO  Run : 创建一个存储答案的文档:/home/ljy/LJY/code-dir/Home_care/File_Filter/out/File_Filter_ans.txt
-2023-03-17 15:18:26,046 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt
-2023-03-17 15:18:26,046 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:26,046 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt
-2023-03-17 15:18:26,046 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:26,046 - INFO  MatchWord : 添加关键词:吃饭 其出现次数：1
-2023-03-17 15:18:26,046 - INFO  MatchWord : 添加关键词:洗澡 其出现次数：1
-2023-03-17 15:18:26,046 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt
-2023-03-17 15:18:26,046 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:26,046 - INFO  InteractUser : 选择的疑似关键词为关键词 :dict_keys(['吃饭', '洗澡'])
-2023-03-17 15:18:26,499 - INFO  InteractUser : 用户确定的单词集合是: []
-2023-03-17 15:18:26,499 - INFO  Run : 没有匹配到信息
-2023-03-17 15:18:26,499 - INFO  ParameterInvaild : path: ['/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt'] , KeyWords: ['吃饭', '洗澡']
-2023-03-17 15:18:26,500 - INFO  ParameterInvaild : UserInfo_dic: {'ID': '2104010209', 'NAME': 'testuser01'} , DemandInfo_dic: {'吃饭': '101', '洗澡': '102'}
-2023-03-17 15:18:26,500 - INFO  Run : 参数校验通过
-2023-03-17 15:18:26,500 - INFO  Run : 创建一个存储答案的文档:/home/ljy/LJY/code-dir/Home_care/File_Filter/out/File_Filter_ans.txt
-2023-03-17 15:18:26,501 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt
-2023-03-17 15:18:26,501 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:26,501 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt
-2023-03-17 15:18:26,501 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:26,501 - INFO  MatchWord : 添加关键词:吃饭 其出现次数：1
-2023-03-17 15:18:26,501 - INFO  MatchWord : 添加关键词:洗澡 其出现次数：1
-2023-03-17 15:18:26,501 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt
-2023-03-17 15:18:26,502 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:26,502 - INFO  InteractUser : 选择的疑似关键词为关键词 :dict_keys(['吃饭', '洗澡'])
-2023-03-17 15:18:26,950 - INFO  InteractUser : 用户确定的单词集合是: []
-2023-03-17 15:18:26,950 - INFO  Run : 没有匹配到信息
-2023-03-17 15:18:26,950 - INFO  ParameterInvaild : path: ['/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt'] , KeyWords: ['吃饭', '洗澡']
-2023-03-17 15:18:26,951 - INFO  ParameterInvaild : UserInfo_dic: {'ID': '2104010209', 'NAME': 'testuser01'} , DemandInfo_dic: {'吃饭': '101', '洗澡': '102'}
-2023-03-17 15:18:26,951 - INFO  Run : 参数校验通过
-2023-03-17 15:18:26,951 - INFO  Run : 创建一个存储答案的文档:/home/ljy/LJY/code-dir/Home_care/File_Filter/out/File_Filter_ans.txt
-2023-03-17 15:18:26,952 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt
-2023-03-17 15:18:26,952 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:26,952 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt
-2023-03-17 15:18:26,952 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:26,952 - INFO  MatchWord : 添加关键词:吃饭 其出现次数：1
-2023-03-17 15:18:26,952 - INFO  MatchWord : 添加关键词:洗澡 其出现次数：1
-2023-03-17 15:18:26,953 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt
-2023-03-17 15:18:26,953 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
-2023-03-17 15:18:26,953 - INFO  InteractUser : 选择的疑似关键词为关键词 :dict_keys(['吃饭', '洗澡'])
-2023-03-17 15:20:43,259 - INFO  InteractUser : 用户确定的单词集合是: ['吃饭']
-2023-03-17 15:20:43,259 - INFO  OrderGen : 获取的用户ID 为010209
-2023-03-17 15:20:43,259 - INFO  OrderGen : 获取的需求ID 为101
-2023-03-17 15:20:43,259 - INFO  OrderGen : 获取的时间 为230317152043
-2023-03-17 15:20:43,259 - INFO  OrderGen : 生成的OrderID 为230317152043010209101
-2023-03-17 15:20:43,260 - INFO  Run : 订单号生成成功
-2023-03-17 15:20:43,260 - INFO  Run : 即将发送的数据信息: 230317152043010209101
-2023-03-17 15:20:43,260 - INFO  Run : 关闭所有的文件
-2023-03-17 15:20:43,260 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/File_Filter/In/DemandInfo.txt
-2023-03-17 15:20:43,261 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/File_Filter/In/KeyWords.txt
-2023-03-17 15:20:43,261 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/File_Filter/In/UserInfo.txt
-2023-03-17 15:20:43,261 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/File_Filter/In/FilePaths.txt
-2023-03-17 15:20:43,262 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/
+2023-03-18 17:04:06,376 - INFO  <module> : logging开始运行...
+2023-03-18 17:04:06,376 - INFO  SetDemandInfo : /home/ljy/LJY/code-dir/Home_care/File_Filter/In/DemandInfo.txt导入成功
+2023-03-18 17:04:06,376 - INFO  SetUserInfo : /home/ljy/LJY/code-dir/Home_care/File_Filter/In/UserInfo.txt导入成功
+2023-03-18 17:04:06,376 - INFO  SetKeyWords : /home/ljy/LJY/code-dir/Home_care/File_Filter/In/KeyWords.txt导入成功
+2023-03-18 17:04:06,376 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt
+2023-03-18 17:04:06,377 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt 导入成功
+2023-03-18 17:04:06,377 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt
+2023-03-18 17:04:06,377 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt 导入成功
+2023-03-18 17:04:06,377 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt
+2023-03-18 17:04:06,377 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt 导入成功
+2023-03-18 17:04:06,377 - INFO  FileInit_Mode2 : FileMode 为 读入文件
+2023-03-18 17:04:06,377 - INFO  Begin : File初始化结果['/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt']
+2023-03-18 17:04:06,377 - INFO  KeyWordInit_Mode2 : KeyWordMode 为 文件读入
+2023-03-18 17:04:06,377 - INFO  Begin : KeyWord初始化结果['吃饭', '洗澡']
+2023-03-18 17:04:06,377 - INFO  Begin : UserInfo初始化结果{'ID': '2104010209'}
+2023-03-18 17:04:06,378 - INFO  DemandInfoInit : 生成的DemandInfo信息为:
+2023-03-18 17:04:06,378 - INFO  Begin : DemandInfo初始化结果{'吃饭': '101', '洗澡': '102'}
+2023-03-18 17:04:06,378 - INFO  ParameterInvaild : path: ['/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt'] , KeyWords: ['吃饭', '洗澡']
+2023-03-18 17:04:06,378 - INFO  ParameterInvaild : UserInfo_dic: {'ID': '2104010209'} , DemandInfo_dic: {'吃饭': '101', '洗澡': '102'}
+2023-03-18 17:04:06,378 - INFO  Run : 参数校验通过
+2023-03-18 17:04:06,378 - INFO  Run : 创建一个存储答案的文档:/home/ljy/LJY/code-dir/Home_care/File_Filter/Out/File_Filter_ans.txt
+2023-03-18 17:04:06,378 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt
+2023-03-18 17:04:06,378 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
+2023-03-18 17:04:06,378 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt
+2023-03-18 17:04:06,378 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
+2023-03-18 17:04:06,378 - INFO  MatchWord : 添加关键词:吃饭 其出现次数：1
+2023-03-18 17:04:06,378 - INFO  MatchWord : 添加关键词:洗澡 其出现次数：1
+2023-03-18 17:04:06,378 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt
+2023-03-18 17:04:06,378 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
+2023-03-18 17:04:06,378 - INFO  InteractUser : 选择的疑似关键词为关键词 :dict_keys(['吃饭', '洗澡'])
+2023-03-18 17:04:08,728 - INFO  InteractUser : 用户确定的单词集合是: []
+2023-03-18 17:04:08,728 - INFO  Run : 没有匹配到信息
+2023-03-18 17:04:08,728 - INFO  ParameterInvaild : path: ['/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt'] , KeyWords: ['吃饭', '洗澡']
+2023-03-18 17:04:08,729 - INFO  ParameterInvaild : UserInfo_dic: {'ID': '2104010209'} , DemandInfo_dic: {'吃饭': '101', '洗澡': '102'}
+2023-03-18 17:04:08,729 - INFO  Run : 参数校验通过
+2023-03-18 17:04:08,729 - INFO  Run : 创建一个存储答案的文档:/home/ljy/LJY/code-dir/Home_care/File_Filter/Out/File_Filter_ans.txt
+2023-03-18 17:04:08,729 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_1.txt
+2023-03-18 17:04:08,729 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
+2023-03-18 17:04:08,729 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_2.txt
+2023-03-18 17:04:08,729 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
+2023-03-18 17:04:08,729 - INFO  MatchWord : 添加关键词:吃饭 其出现次数：1
+2023-03-18 17:04:08,729 - INFO  MatchWord : 添加关键词:洗澡 其出现次数：1
+2023-03-18 17:04:08,729 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/test_3.txt
+2023-03-18 17:04:08,729 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡']
+2023-03-18 17:04:08,729 - INFO  InteractUser : 选择的疑似关键词为关键词 :dict_keys(['吃饭', '洗澡'])
+2023-03-18 17:04:10,995 - INFO  InteractUser : 用户确定的单词集合是: ['洗澡']
+2023-03-18 17:04:10,995 - INFO  OrderGen : 获取的用户ID 为010209
+2023-03-18 17:04:10,995 - INFO  OrderGen : 获取的需求ID 为102
+2023-03-18 17:04:10,996 - INFO  OrderGen : 获取的时间 为230318170410
+2023-03-18 17:04:10,996 - INFO  OrderGen : 生成的OrderID 为230318170410010209102
+2023-03-18 17:04:10,996 - INFO  Run : 订单号生成成功
+2023-03-18 17:04:10,996 - INFO  Run : 即将发送的数据信息: 230318170410010209102
+2023-03-18 17:04:10,996 - INFO  Run : 关闭所有的文件
+2023-03-18 17:04:10,996 - INFO  OutFile : 导出后文件路径为/home/ljy/LJY/code-dir/Home_care/aim/aim.txt
+2023-03-18 17:04:10,996 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/File_Filter/In/DemandInfo.txt
+2023-03-18 17:04:10,996 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/File_Filter/In/KeyWords.txt
+2023-03-18 17:04:10,996 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/File_Filter/In/UserInfo.txt
+2023-03-18 17:04:10,996 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/File_Filter/In/FilePaths.txt
+2023-03-18 17:04:10,997 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/File_Filter/In/Files/
+2023-03-18 17:04:11,003 - INFO  ClearOutFile : 删除/home/ljy/LJY/code-dir/Home_care/File_Filter/Out/File_Filter_ans.txt

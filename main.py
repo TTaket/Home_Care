@@ -1,6 +1,5 @@
 import File_Filter
 
-File_Filter.Clear()
 File_Filter.SetDemandInfo("../testfile/DemandInfo.txt")
 File_Filter.SetUserInfo("../testfile/UserInfo.txt")
 File_Filter.SetKeyWords("../testfile/KeyWords.txt")
@@ -11,4 +10,8 @@ Begin_dic = File_Filter.Begin()
 Flag = False
 while Flag == False:
     Flag = File_Filter.Run(Begin_dic)
+
+File_Filter.OutFile("../aim/" , "aim.txt")
 File_Filter.End()
+
+

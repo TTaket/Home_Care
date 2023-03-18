@@ -25,7 +25,7 @@ FILEPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + "/
 FILESPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + "/In/Files/"
 
 # 输出订单号路径
-ANSFILEPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + "/out/File_Filter_ans.txt"
+ANSFILEPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + "/Out/File_Filter_ans.txt"
 
 # 目录路径
 LOGPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + "/log/File_Filter_log.txt"
@@ -41,4 +41,10 @@ KEYWORDPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) +
 
 # BASE路径
 BASEPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# 输入缓冲区路径
+INDIRPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))+ "/In/"
+
+# 输出缓冲区路径
+OUTDIRPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + "/Out/"
 

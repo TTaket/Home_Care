@@ -1,5 +1,6 @@
-import InFile
+import InAndOut
 
 def End():
     #卸载所有导入文件
-    InFile.ClearInFile()
+    InAndOut.ClearInFile()
+    InAndOut.ClearOutFile()

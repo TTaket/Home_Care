@@ -11,8 +11,11 @@ SetDemandInfo = File_Filter.SetDemandInfo
 SetFile = File_Filter.SetFile
 SetUserInfo = File_Filter.SetUserInfo
 
-#清除 导入文件 
-Clear = File_Filter.Clear
+#清除 导入缓冲区
+ClearInFile = File_Filter.ClearInFile
+#清除 导出缓冲区
+ClearOutFile = File_Filter.ClearOutFile
 
-
+#设置导出文件API
+OutFile = File_Filter.OutFile
 
