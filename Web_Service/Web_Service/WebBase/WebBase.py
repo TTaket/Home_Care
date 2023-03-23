@@ -3,6 +3,6 @@ import requests
 
 def __MsgBase(url , info):
     Resp = requests.post(url , info)
-    (Resp)
+    return Resp
 
     

@@ -10,7 +10,7 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 import WebBase
 import ParameterInvaild
 
-def SendMsg(url , typ , info):
+def SendHttpMsg(url , typ , info):
     
     #进行参数校验
     try:
@@ -23,6 +23,7 @@ def SendMsg(url , typ , info):
         logging.info("参数校验通过")
 
     #匹配并进行发送信息
+    info = ""
     match typ:
         case conf.ORDERMSGREQ:
             info = conf.OrderMsgReq(info)
@@ -31,3 +32,8 @@ def SendMsg(url , typ , info):
             #报错
             print(f"没有类型这样的请求包{type}")
             logging.error(f"没有类型这样的请求包{type}")
+            exit
+
+
+    #信息处理之后返回
+    return info

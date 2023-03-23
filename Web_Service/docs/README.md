@@ -11,10 +11,8 @@
 3. img 存放一些图片
 4. tests 用于进行基准测试
 5. Web_Service 用于存放主要逻辑
-   1. handle 处理逻辑部分
-   2. init 初始化部分
-   3. interact 交互部分
-   4. start 启动部分
+   1. SendHttpMsg 发送信息的逻辑层
+   2. WebBase 发送信息的网络层
 
 ## 3. 功能实现
 
@@ -23,3 +21,8 @@
 ## 4. 测试结果
 
 ## 5. 使用方法
+
+- HttpMsg(url , type , info)
+  - 功能：向 url 发送 type 类型内容为 info 的 http 包 方法为 post
+  - 入参：url 地址 type 内容类型 info 信息
+  - 返回值：http 的返回包
