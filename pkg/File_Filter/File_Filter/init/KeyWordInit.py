@@ -1,27 +1,14 @@
 import logging
-import conf
+import Home_care.conf.conf as conf
 
 
-#输入关键词
-def KeyWordInit_Mode1():
-    logging.info("KeyWordMode 为 交互输入")
-    words = []
-    while True:
-        word = input("请输入关键词并/exit为停止:")
-        if word == '/exit':
-            break
-        else:
-            words.append(word)
-    return words
-
-#读入关键词
-def KeyWordInit_Mode2():
-    logging.info("KeyWordMode 为 文件读入")
-    words = []
+#读入文件路径
+def KeyWordInit():
+    KeyWords = []
     f = open(conf.KEYWORDPATH,'r',encoding='utf-8')    
-    flist = f.read().splitlines()
-    for word in flist:
+    words = f.read().splitlines()
+    for word in words:
         if len(word) == 0 or word[0] == '#':
             continue;
-        words.append(word)
-    return words
+        KeyWords.append(word)
+    return KeyWords

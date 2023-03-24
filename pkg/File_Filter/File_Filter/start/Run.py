@@ -1,21 +1,18 @@
 # coding=utf-8    
 import os
 import logging 
-import handle 
-import conf
-from conf import Customization_Error 
+import Home_care.pkg.File_Filter.File_Filter.handle as handle
+import Home_care.conf.conf as conf
 
 
 #主体运行程序
-def Run(Begin_dic):
+def Run(Files,Keywords):
     #拆包
-    FilePaths =  Begin_dic.FilePaths
-    Keywords = Begin_dic.KeyWords
-     
+    FilePaths = Files
     #首先进行参数校验
     try:
         handle.ParameterInvaild(FilePaths , Keywords)
-    except Customization_Error as err:
+    except conf.Customization_Error as err:
         logging.error(err.info)
         print (err.info)
         exit
@@ -23,8 +20,7 @@ def Run(Begin_dic):
         logging.info("参数校验通过")
 
     #创建并且打开一个存储答案的文档
-    fans = open(conf.ANSFILEPATH,'w',encoding='utf-8')    
-    logging.info("创建一个存储答案的文档:{}".format(conf.ANSFILEPATH))
+    fans = open(conf.FF_ANSFILE,'w',encoding='utf-8')    
     
     Matchallword ={};
     for path in FilePaths:
@@ -60,5 +56,5 @@ def Run(Begin_dic):
     
     #关闭所有的文件
     fans.close()
-    logging.info("关闭所有的文件")
+    logging.info("关闭文件")
     return True

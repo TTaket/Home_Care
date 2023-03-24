@@ -1,4 +1,4 @@
-import conf
+import Home_care.conf.conf as conf
 import os
 import logging
 import shutil
@@ -14,8 +14,8 @@ def SetFile(FilePath):
         raise conf.Customization_Error("参数校验不合法： 我们无法打开这个文件路径 {}".format(FilePath) )
     
     #如果没有对应的Files文件夹 则生成一个
-    if os.path.exists(conf.FILESPATH) == False:
-        os.mkdir(conf.FILESPATH)
+    if os.path.exists(conf.FF_FILEPATH) == False:
+        os.mkdir(conf.FF_FILEPATH)
 
     # 获取文件所在目录和完整文件名
     _, full_file_name = os.path.split(FilePath)
@@ -23,11 +23,11 @@ def SetFile(FilePath):
     
     #可以正常读写
     source = FilePath
-    target = conf.FILESPATH +file_name + file_ext
+    target = conf.FF_FILEPATH +file_name + file_ext
     logging.info("导入后文件路径为{}".format(target))
 
     shutil.copyfile(source, target)
-    f = open(conf.FILEPATH , 'a' , encoding= 'utf-8')
+    f = open(conf.FF_FILELIST , 'a' , encoding= 'utf-8')
     f.writelines(target+'\n')
     f.close()
 

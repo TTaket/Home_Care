@@ -1,7 +1,7 @@
 import os
 import logging 
 
-from conf import Customization_Error 
+import Home_care.conf.conf as conf
 
 
 #ParameterInvaild
@@ -14,14 +14,14 @@ def ParameterInvaild(FilePaths , KeyWords ):
     for path in FilePaths:
         flag1 = os.path.exists(path)
         if flag1 == False:
-            raise Customization_Error("参数校验不合法： 这个文件不存在 {}".format(path))
+            raise conf.Customization_Error("参数校验不合法： 这个文件不存在 {}".format(path))
         flag2 = os.access(path,os.W_OK|os.R_OK)
         if flag2 == False: 
-            raise Customization_Error("参数校验不合法： 我们无法打开这个文件路径 {}".format(path) )
+            raise conf.Customization_Error("参数校验不合法： 我们无法打开这个文件路径 {}".format(path) )
     
     #验证KeyWords是否非空
     if len(KeyWords) == 0:
-        raise Customization_Error("参数校验不合法： KeyWords为空 {}".format(KeyWords)) 
+        raise conf.Customization_Error("参数校验不合法： KeyWords为空 {}".format(KeyWords)) 
         
     #一切正常
     pass

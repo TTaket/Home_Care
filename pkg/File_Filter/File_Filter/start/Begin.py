@@ -1,56 +1,18 @@
-#!/usr/bin/python
-# coding=utf-8    
-import os
-import sys
+
 import logging 
-
-
-#增加包路径
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.path.append(os.path.abspath(os.path.dirname(__file__)))
-
-import conf
-import init
+import Home_care.conf.conf as conf
+import Home_care.pkg.File_Filter.File_Filter.init as init
 
 
 
 #程序运行入口
 #可支持开启时设置运行模式 默认文档读入
 #返回是否找到对应的关键词
-def Begin(FileMode=2 ,KeyWordMode =2):
+def Begin():
     print ("Begin初始配置开始")
-    
-    #设置Begin包
-    Begin_dic = conf.Begin_Info     
-
-    #文件的初始化
-    if FileMode == 1:
-        Files = init.File_Mode1()
-    elif FileMode == 2:
-        Files = init.File_Mode2()
-    else:
-        #TODO： 可用异常去升级
-        print ("错误的文件模式")
-        exit
+    Keywords = init.KeyWord()
+    Files = init.File()
     print ("File初始化结果{}".format(Files))
     logging.info("File初始化结果{}".format(Files))
 
-    #关键词的初始化
-    if KeyWordMode == 1:
-        words = init.KeyWord_Mode1()
-    elif KeyWordMode == 2:
-        words = init.KeyWord_Mode2()
-    else:
-        #TODO： 可用异常去升级
-        print ("错误的关键词模式")
-        exit
-    print ("KeyWord初始化结果{}".format(words))
-    logging.info("KeyWord初始化结果{}".format(words))
-    
-
-    #合并返回包
-    Begin_dic.FilePaths = Files
-    Begin_dic.KeyWords = words
-
-    print ("Begin初始配置结束")
-    return Begin_dic
+    return Files , Keywords
