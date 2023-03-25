@@ -3,7 +3,7 @@ import Home_care.conf.conf as conf
 
 
 #修改位置
-import init
+import Home_care.Service.OrderInfo.OrderInfo.init as init
 
 
 
@@ -11,9 +11,16 @@ import init
 def Begin():
     print ("Begin初始配置开始")
     #初始化
-    xx = init.xxinit()
+    User = init.User()
+    print ("User初始化结果{}".format(User))
+    logging.info("User初始化结果{}".format(User))
     
-    print ("xx初始化结果{}".format(xx))
-    logging.info("xx初始化结果{}".format(xx))
+    Demand = init.Demand()
+    print ("Demand初始化结果{}".format(Demand))
+    logging.info("Demand初始化结果{}".format(Demand))
+    
+    KeyWord = init.KeyWord()
+    print ("Demand初始化结果{}".format(Demand))
+    logging.info("Demand初始化结果{}".format(Demand))
 
-    return xx
+    return User , Demand , KeyWord

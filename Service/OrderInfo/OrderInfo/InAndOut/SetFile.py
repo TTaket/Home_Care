@@ -21,7 +21,7 @@ def SetFile(Path):
     
     #可以正常读写
     source = Path
-    target = conf.xx_INPATH +file_name + file_ext
+    target = conf.ORDERINFO_INFILE
     logging.info("导入后文件路径为{}".format(target))
 
 

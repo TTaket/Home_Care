@@ -1,4 +1,4 @@
-import conf
+import Home_care.conf.conf as conf
 import logging
 
 def DemandInfoInit():

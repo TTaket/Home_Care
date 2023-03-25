@@ -1,3 +1,3 @@
 from . import OrderInfo
 
-HttpMsg = OrderInfo.HttpMsg
+Deal = OrderInfo.Deal

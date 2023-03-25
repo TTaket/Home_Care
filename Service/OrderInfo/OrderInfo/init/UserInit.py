@@ -1,4 +1,4 @@
-import conf
+import Home_care.conf.conf as conf
 import logging
 
 #读取用户信息
@@ -13,4 +13,5 @@ def UserInfoInit():
         else:
             tmplist = tmpinfo.split("-")
             UserInfo_dic.update({tmplist[0] : tmplist[1]})
+    logging.info("生成的UserInfo信息为:",UserInfo_dic)
     return UserInfo_dic

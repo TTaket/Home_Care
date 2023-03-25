@@ -2,30 +2,33 @@
 import os
 import logging 
 import Home_care.conf.conf as conf
-
-#修改位置
-import handle 
+import Home_care.Service.OrderInfo.OrderInfo.handle as handle
 
 #主体运行程序
-def Run(xx, yy):
-    
-    
+def Run(User , Demand , KeyWord):
     #首先进行参数校验
     try:
-        handle.ParameterInvaild(xx , yy)
+        handle.ParameterInvaild(User , Demand , KeyWord)
     except conf.Customization_Error as err:
         logging.error(err.info)
         print (err.info)
         exit
     else:
         logging.info("参数校验通过")
+ 
+    try:
+        OrderInfo = handle.OrderGen(KeyWord[0] ,User , Demand)
+    except conf.Customization_Error as err:
+        logging.error(err.info)
+        print (err.info)
+        exit
+    else:
+        print ("订单号生成成功")
+        logging.info("订单号生成成功")
+       
+    logging.info("即将发送的数据信息: {}".format(OrderInfo))
+    
+    #发送订单
+    ret = handle.OrderSend(OrderInfo , url)
 
-    #创建并且打开一个存储答案的文档
-    fans = open(conf.xx_ANSFILE,'w',encoding='utf-8')    
-    
-   
-    
-    #关闭所有的文件
-    fans.close()
-    logging.info("关闭文件")
-    return True
+    return ret
