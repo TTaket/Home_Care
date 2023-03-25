@@ -1,5 +1,5 @@
-from . import xx
+#from . import xx
 
 #出口函数
-Deal = xx.Deal
+#Deal = xx.Deal
 

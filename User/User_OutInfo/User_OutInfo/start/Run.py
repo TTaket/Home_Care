@@ -1,7 +1,7 @@
 # coding=utf-8    
 import os
 import logging 
-import Home_care.conf.conf as conf
+import  conf.conf as conf
 
 #修改位置
 import handle 

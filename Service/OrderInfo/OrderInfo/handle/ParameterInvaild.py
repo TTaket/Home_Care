@@ -1,7 +1,7 @@
 import os
 import logging 
 
-from conf import Customization_Error 
+import conf.conf as conf
 
 
 #ParameterInvaild
@@ -13,15 +13,15 @@ def ParameterInvaild(UserInfo_dic , DemandInfo_dic , KeyWords):
     
     #验证KeyWords是否非空
     if len(KeyWords) == 0:
-        raise Customization_Error("参数校验不合法： KeyWords为空 {}".format(KeyWords)) 
+        raise conf.Customization_Error("参数校验不合法： KeyWords为空 {}".format(KeyWords)) 
     
     #验证UserInfo是否非空
     if len(UserInfo_dic) == 0:
-        raise Customization_Error("参数校验不合法： UserInfo_dic为空 {}".format(UserInfo_dic)) 
+        raise conf.Customization_Error("参数校验不合法： UserInfo_dic为空 {}".format(UserInfo_dic)) 
     
     #验证DemandInfo是否非空
     if len(DemandInfo_dic) == 0:
-        raise Customization_Error("参数校验不合法： DemandInfo_dic为空 {}".format(DemandInfo_dic)) 
+        raise conf.Customization_Error("参数校验不合法： DemandInfo_dic为空 {}".format(DemandInfo_dic)) 
         
     #一切正常
     pass

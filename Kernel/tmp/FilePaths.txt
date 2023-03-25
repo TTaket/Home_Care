@@ -1,0 +1,8 @@
+#测试的文档路径
+#以根目录为基础
+#如果想要注释掉必须顶格添加‘#’
+
+
+/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/Files/test_1.txt
+/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/Files/test_2.txt
+/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/Files/test_3.txt

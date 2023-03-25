@@ -1,11 +1,10 @@
 #设置位置
-import Home_care.Service.OrderInfo.OrderInfo.InAndOut as InAndOut
-import Home_care.Service.OrderInfo.OrderInfo.start as start
+import Service.OrderInfo.OrderInfo.InAndOut as InAndOut
+import Service.OrderInfo.OrderInfo.start as start
 
 
 def deal(src , url):
-    for path in src:
-        InAndOut.SetFile(path)
+    InAndOut.SetFile(src)
     t = start.Begin()
     ret = start.Run(t[0] , t[1] , t[2] , url)
     start.End()

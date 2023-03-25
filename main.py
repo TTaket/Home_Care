@@ -1,0 +1,3 @@
+import Kernel
+
+Kernel.Deal()

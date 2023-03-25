@@ -1,10 +1,9 @@
-import Home_care.conf.conf as conf
+import  conf.conf as conf
 import logging
 import os
 import shutil
 
 
-#USERINTERACT 改成对应名字
 #传入导出的位置
 def OutFile(Path , Name):
     Path = os.path.abspath(Path)
@@ -30,8 +29,9 @@ def OutFile(Path , Name):
     #可以正常读写
     source = conf.USERINTERACT_OUTFILE
     target = Path +'/' +Name
+    shutil.copyfile(source, target)
     logging.info("导出后文件路径为{}".format(target))
     print ("导出后文件路径为{}".format(target))
 
-    shutil.copyfile(source, target)
+    
 

@@ -31,7 +31,11 @@ BASEPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CONFPATH = str((os.path.dirname(os.path.abspath(__file__)))) +"/conf.txt"
 
 # kernel的缓冲区
-KERNELTMPPATH = BASEPATH+"/Kernel/tmp"
+KERNELTMPPATH = BASEPATH+"/Kernel/tmp/"
+# kernel缓冲区里文件列表
+KERNELTMPFILELIST = BASEPATH+"/Kernel/tmp/FilePaths.txt"
+# kernel缓冲区里文件内容
+KERNELTMPFILEPATH = BASEPATH+"/Kernel/tmp/Files"
 
 # 临时文件名称
 TMPFILE = "tmpfile.txt"
@@ -48,13 +52,13 @@ FF_INPATH = BASEPATH+"/pkg/File_Filter/In"
 FF_OUTPATH = BASEPATH+"/pkg/File_Filter/Out"
 
 # FF文件列表
-FF_FILELIST = FF_INPATH+"/Filelist"
+FF_FILELIST = FF_INPATH+"/Filelist.txt"
 
 # FF文件位置
-FF_FILEPATH = FF_INPATH+"/File"
+FF_FILEPATH = FF_INPATH+"/Files/"
 
 # FF临时答案文件
-FF_ANSFILE = FF_OUTPATH+"/TMPFILE"
+FF_ANSFILE = FF_OUTPATH+"/"+TMPFILE
 
 
 #---------------------OrderInfo 模块
@@ -65,10 +69,10 @@ ORDERINFO_INPATH = BASEPATH+"/Service/OrderInfo/In"
 ORDERINFO_OUTPATH = BASEPATH+"/Service/OrderInfo/Out"
 
 # OrderInfo传入文件位置
-ORDERINFO_INFILE = ORDERINFO_INPATH+"/TMPFILE"
+ORDERINFO_INFILE = ORDERINFO_INPATH+"/"+TMPFILE
 
 # OrderInfo临时答案文件
-ORDERINFO_OUTFILE = ORDERINFO_OUTPATH+"/TMPFILE"
+ORDERINFO_OUTFILE = ORDERINFO_OUTPATH+"/"+TMPFILE
 
 
 #---------------------User_Interact 模块
@@ -79,10 +83,10 @@ USERINTERACT_INPATH = BASEPATH+"/User/User_Interact/In"
 USERINTERACT_OUTPATH = BASEPATH+"/User/User_Interact/Out"
 
 # User_Interact传入文件位置
-USERINTERACT_INFILE = USERINTERACT_INPATH+"/TMPFILE"
+USERINTERACT_INFILE = USERINTERACT_INPATH+"/"+TMPFILE
 
 # User_Interact临时答案文件
-USERINTERACT_OUTFILE = USERINTERACT_OUTPATH+"/TMPFILE"
+USERINTERACT_OUTFILE = USERINTERACT_OUTPATH+"/"+TMPFILE
 
 #---------------------Web_Service 模块
 #定义关键字
@@ -91,7 +95,7 @@ ORDERMSGRESP = 1002
 TypeList = {ORDERMSGREQ}
 
 #定义url
-TESTURL = "xxx"
+TESTURL = "http://43.138.161.192:8080/吃饭"
 UrlList = {TESTURL}
 
 #定义信息最大大小 目前为1M

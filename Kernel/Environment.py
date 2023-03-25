@@ -1,7 +1,7 @@
 import os
 import logging
-import Home_care.conf.conf as conf
-import Home_care.Kernel.Init as Init
+import conf.conf as conf
+import Kernel.Init as Init
 
 #################################
 #

@@ -1,5 +1,5 @@
 import logging
-import Home_care.conf.conf as conf
+import  conf.conf as conf
 
 
 #需要从conf中读取的内容

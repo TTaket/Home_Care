@@ -1,9 +1,9 @@
 import logging 
-import Home_care.conf.conf as conf
+import  conf.conf as conf
 
 
 #修改位置
-import Home_care.User.User_Interact.User_Interact.init as init 
+import  User.User_Interact.User_Interact.init as init 
 
 
 

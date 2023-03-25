@@ -1,7 +1,7 @@
 
 import logging 
-import Home_care.conf.conf as conf
-import Home_care.pkg.File_Filter.File_Filter.init as init
+import  conf.conf as conf
+import  pkg.File_Filter.File_Filter.init as init
 
 
 

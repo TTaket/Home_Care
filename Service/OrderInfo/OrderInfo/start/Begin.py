@@ -1,9 +1,9 @@
 import logging 
-import Home_care.conf.conf as conf
+import  conf.conf as conf
 
 
 #修改位置
-import Home_care.Service.OrderInfo.OrderInfo.init as init
+import  Service.OrderInfo.OrderInfo.init as init
 
 
 
@@ -20,7 +20,7 @@ def Begin():
     logging.info("Demand初始化结果{}".format(Demand))
     
     KeyWord = init.KeyWord()
-    print ("Demand初始化结果{}".format(Demand))
-    logging.info("Demand初始化结果{}".format(Demand))
+    print ("KeyWord初始化结果{}".format(KeyWord))
+    logging.info("KeyWord初始化结果{}".format(KeyWord))
 
     return User , Demand , KeyWord

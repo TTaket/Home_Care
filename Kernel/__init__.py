@@ -1,5 +1,6 @@
-from . import Kernel
 from . import Environment
+from . import Kernel
+
 
 
 Deal = Kernel.Deal

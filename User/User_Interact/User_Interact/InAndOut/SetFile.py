@@ -1,4 +1,4 @@
-import Home_care.conf.conf as conf
+import  conf.conf as conf
 import os
 import logging
 import shutil
@@ -9,16 +9,16 @@ def SetFile(Path):
     Path = os.path.abspath(Path)
     flag1 = os.path.exists(Path)
     if flag1 == False:
-        raise conf.Customization_Error("参数校验不合法： 这个文件不存在 {}".format(Path))
+        raise conf.Customization_Error(f"参数校验不合法： 这个文件不存在 {Path}")
     flag2 = os.access(Path,os.R_OK)
     if flag2 == False: 
-        raise conf.Customization_Error("参数校验不合法： 我们无法打开这个文件路径 {}".format(Path) )
+        raise conf.Customization_Error(f"参数校验不合法： 我们无法打开这个文件路径 {Path}")
     
     #可以正常读写
     source = Path
     target = conf.USERINTERACT_INFILE
     logging.info("导入后文件路径为{}".format(target))
+    shutil.copyfile(source, target)
 
-
-    print ("File {} 导入成功".format(target))    
+    print ("-----------------File {} 导入成功".format(target))    
     logging.info("File {} 导入成功".format(target))

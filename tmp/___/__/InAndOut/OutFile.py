@@ -1,4 +1,4 @@
-import Home_care.conf.conf as conf
+import  conf.conf as conf
 import logging
 import os
 import shutil

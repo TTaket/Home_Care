@@ -1,4 +1,4 @@
-import conf
+import conf.conf as conf
 import sys
 import os
 import logging
@@ -7,8 +7,8 @@ import logging
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
-import WebBase
-import ParameterInvaild
+import Service.Web_Service.Web_Service.WebBase as WebBase
+import Service.Web_Service.Web_Service.SendHttpMsg.ParameterInvaild as ParameterInvaild
 
 def SendHttpMsg(url , typ , info):
     
@@ -27,13 +27,13 @@ def SendHttpMsg(url , typ , info):
     match typ:
         case conf.ORDERMSGREQ:
             info = conf.OrderMsgReq(info)
-            WebBase.__MsgBase(url , info)
+            info = WebBase.__MsgBase(url , info)
         case _:
             #报错
             print(f"没有类型这样的请求包{type}")
             logging.error(f"没有类型这样的请求包{type}")
             exit
 
-
+    
     #信息处理之后返回
     return info

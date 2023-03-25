@@ -1,0 +1,53 @@
+2023-03-25 22:10:24,601 - INFO  <module> : logging开始运行...
+2023-03-25 22:10:24,657 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_1.txt
+2023-03-25 22:10:24,657 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_1.txt 导入成功
+2023-03-25 22:10:24,657 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_2.txt
+2023-03-25 22:10:24,657 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_2.txt 导入成功
+2023-03-25 22:10:24,657 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_3.txt
+2023-03-25 22:10:24,657 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_3.txt 导入成功
+2023-03-25 22:10:24,657 - INFO  Begin : File初始化结果['/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_3.txt']
+2023-03-25 22:10:24,657 - INFO  ParameterInvaild : path: ['/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_3.txt'] , KeyWords: ['吃饭', '洗澡', '音乐', '视频']
+2023-03-25 22:10:24,658 - INFO  Run : 参数校验通过
+2023-03-25 22:10:24,658 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_1.txt
+2023-03-25 22:10:24,658 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡', '音乐', '视频']
+2023-03-25 22:10:24,658 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_2.txt
+2023-03-25 22:10:24,658 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡', '音乐', '视频']
+2023-03-25 22:10:24,658 - INFO  MatchWord : 添加关键词:吃饭 其出现次数：1
+2023-03-25 22:10:24,658 - INFO  MatchWord : 添加关键词:洗澡 其出现次数：1
+2023-03-25 22:10:24,658 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_3.txt
+2023-03-25 22:10:24,658 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡', '音乐', '视频']
+2023-03-25 22:10:24,658 - INFO  Run : FF找到的关键词有: 吃饭
+2023-03-25 22:10:24,658 - INFO  Run : FF找到的关键词有: 洗澡
+2023-03-25 22:10:24,658 - INFO  Run : 关闭文件
+2023-03-25 22:10:24,658 - INFO  OutFile : 导出后文件路径为/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
+2023-03-25 22:10:24,658 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Filelist.txt
+2023-03-25 22:10:24,659 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/
+2023-03-25 22:10:24,659 - INFO  ClearOutFile : 删除/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/Out/tmpfile.txt
+2023-03-25 22:10:24,659 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/User/User_Interact/In/tmpfile.txt
+2023-03-25 22:10:24,659 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/User/User_Interact/In/tmpfile.txt 导入成功
+2023-03-25 22:10:24,659 - INFO  Begin : File初始化结果['吃饭', '洗澡']
+2023-03-25 22:10:24,659 - INFO  ParameterInvaild : KeyWords: ['吃饭', '洗澡']
+2023-03-25 22:10:24,659 - INFO  ChooseWords : 参数校验通过
+2023-03-25 22:10:24,659 - INFO  InteractUser_ChooseWords : 选择的疑似关键词为关键词 :['吃饭', '洗澡']
+2023-03-25 22:10:25,974 - INFO  InteractUser_ChooseWords : 用户确定的单词集合是: ['吃饭']
+2023-03-25 22:10:25,974 - INFO  ChooseWords : 关闭文件
+2023-03-25 22:10:25,975 - INFO  OutFile : 导出后文件路径为/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
+2023-03-25 22:10:25,975 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/User/User_Interact/In/tmpfile.txt
+2023-03-25 22:10:25,982 - INFO  ClearOutFile : 删除/home/ljy/LJY/code-dir/Home_care/User/User_Interact/Out/tmpfile.txt
+2023-03-25 22:10:25,982 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/Service/OrderInfo/In/tmpfile.txt
+2023-03-25 22:10:25,982 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/Service/OrderInfo/In/tmpfile.txt 导入成功
+2023-03-25 22:10:25,982 - INFO  UserInfoInit : 生成的UserInfo信息为:
+2023-03-25 22:10:25,983 - INFO  Begin : User初始化结果{'ID': '2104010209'}
+2023-03-25 22:10:25,983 - INFO  DemandInfoInit : 生成的DemandInfo信息为:
+2023-03-25 22:10:25,983 - INFO  Begin : Demand初始化结果{'吃饭': '101', '洗澡': '102'}
+2023-03-25 22:10:25,983 - INFO  Begin : KeyWord初始化结果['吃饭']
+2023-03-25 22:10:25,983 - INFO  ParameterInvaild : User: {'ID': '2104010209'} , Demand: {'吃饭': '101', '洗澡': '102'} , KeyWords: ['吃饭']
+2023-03-25 22:10:25,983 - INFO  Run : 参数校验通过
+2023-03-25 22:10:25,983 - INFO  OrderGen : 获取的用户ID 为010209
+2023-03-25 22:10:25,983 - INFO  OrderGen : 获取的需求ID 为101
+2023-03-25 22:10:25,983 - INFO  OrderGen : 获取的时间 为230325221025
+2023-03-25 22:10:25,983 - INFO  OrderGen : 生成的OrderID 为230325221025010209101
+2023-03-25 22:10:25,983 - INFO  Run : 订单号生成成功
+2023-03-25 22:10:25,983 - INFO  Run : 即将发送的数据信息: 230325221025010209101
+2023-03-25 22:10:25,983 - INFO  SendHttpMsg : 参数校验通过
+2023-03-25 22:10:26,402 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/Service/OrderInfo/In/tmpfile.txt

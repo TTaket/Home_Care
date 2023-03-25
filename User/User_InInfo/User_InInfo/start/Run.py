@@ -1,9 +1,9 @@
 # coding=utf-8    
 import os
 import logging 
-import Home_care.conf.conf as conf
-import Home_care.pkg.yuyin_files as yuyin_files
-import Home_care.User.User_InInfo.User_InInfo.handle as handle 
+import  conf.conf as conf
+import  pkg.yuyin_files as yuyin_files
+import  User.User_InInfo.User_InInfo.handle as handle 
 
 #主体运行程序
 def Run():

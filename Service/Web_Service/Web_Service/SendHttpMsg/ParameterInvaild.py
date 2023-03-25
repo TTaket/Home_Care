@@ -1,5 +1,5 @@
 import logging
-import conf
+import conf.conf as conf
 import sys
 
 def Check(url , typ , info):
