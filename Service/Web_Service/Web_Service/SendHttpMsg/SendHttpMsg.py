@@ -23,11 +23,10 @@ def SendHttpMsg(url , typ , info):
         logging.info("参数校验通过")
 
     #匹配并进行发送信息
-    info = ""
     match typ:
         case conf.ORDERMSGREQ:
             info = conf.OrderMsgReq(info)
-            info = WebBase.__MsgBase(url , info)
+            ret = WebBase.__MsgBase(url , info)
         case _:
             #报错
             print(f"没有类型这样的请求包{type}")
@@ -36,4 +35,4 @@ def SendHttpMsg(url , typ , info):
 
     
     #信息处理之后返回
-    return info
+    return ret

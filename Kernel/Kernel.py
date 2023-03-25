@@ -50,6 +50,4 @@ def Deal():
     #5. 结束
     exit()
 
-Deal()
-
 

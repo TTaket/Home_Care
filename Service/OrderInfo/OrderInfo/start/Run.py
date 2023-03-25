@@ -25,8 +25,6 @@ def Run(User , Demand , KeyWord ,url):
     else:
         print ("订单号生成成功")
         logging.info("订单号生成成功")
-       
-    logging.info("即将发送的数据信息: {}".format(OrderInfo))
     
     #发送订单
     ret = handle.OrderSend(OrderInfo , url)

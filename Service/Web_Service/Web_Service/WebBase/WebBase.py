@@ -1,11 +1,13 @@
 import conf.conf as conf
 import requests
+import logging
 import json
 
 def __MsgBase(url , info):
-    param = "吃饭"
-    Resp = requests.post(url , param.encode())
-    print(Resp.json)
+    #把类信息变成字典发送过去
+    logging.info(info.__dict__)
+    Resp = requests.post(url , json= info.__dict__)
+    print(Resp.text)
     return Resp
 
     

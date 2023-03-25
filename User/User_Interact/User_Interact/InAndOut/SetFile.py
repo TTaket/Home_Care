@@ -20,5 +20,4 @@ def SetFile(Path):
     logging.info("导入后文件路径为{}".format(target))
     shutil.copyfile(source, target)
 
-    print ("-----------------File {} 导入成功".format(target))    
     logging.info("File {} 导入成功".format(target))
