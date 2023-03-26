@@ -1,15 +1,15 @@
+import conf.conf as conf
 import logging
-import  conf.conf as conf
 
-
-#需要从conf中读取的内容
 #读入文件路径
-def xxInit():
-    rets = []
+def WordInit():
+    Words = []
     f = open(conf.xx,'r',encoding='utf-8')    
     flist = f.read().splitlines()
-    for tmp in flist:
-        if len(tmp) == 0 or tmp[0] == '#':
+    for word in flist:
+        #跳过空行和注释
+        if len(word) == 0 or word[0] == '#':
             continue;
-        rets.append(tmp)
-    return rets
+        Words.append(word)
+    logging.info(f"初始化的Words内容为{Words}")
+    return Words

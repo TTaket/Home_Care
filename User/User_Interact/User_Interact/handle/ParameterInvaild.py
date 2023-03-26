@@ -11,7 +11,6 @@ def ParameterInvaild(Words):
     #验证info是否为空
     if len(Words) == 0:
         WrongInfo = (f"3.参数校验不合法： Words为空{Words}")
-        logging.error(WrongInfo)
         raise conf.Customization_Error(WrongInfo) 
 
     logging.info("3.参数校验一切正常")

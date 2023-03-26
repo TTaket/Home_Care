@@ -1,3 +1,3 @@
 from . import OrderInfo
 
-OrderGenandSend = OrderInfo.Deal
+Order = OrderInfo.Order

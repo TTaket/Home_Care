@@ -10,6 +10,12 @@ def ChooseWords(srcfile , descpath):
     InAndOut.SetFile(path)
     t = start.Begin()
     start.ChooseWords(t)
-    InAndOut.OutFile(descpath,conf.TMPFILE)
+    try:
+        InAndOut.OutFile(descpath,conf.TMPFILE)
+    except conf.Customization_Error as err:
+        print(err.info)
+        logging.error(err.info)
+        exit()
+    
     start.End()
     

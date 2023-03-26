@@ -1,10 +1,10 @@
 import os
-import  conf.conf as conf
+import conf.conf as conf
 import logging
 
 def ClearOutFile():
 
     #删除输出缓存文件
-    if os.path.exists(conf.xx_OUTFILE) == True:
-        os.remove(conf.xx_OUTFILE)
-        logging.info("删除{}".format(conf.xx_OUTFILE))
+    if os.path.exists(conf.xx) == True:
+        os.remove(conf.xx)
+        logging.info("删除{}".format(conf.xx))

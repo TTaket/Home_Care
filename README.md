@@ -21,6 +21,8 @@
 
 ## 4. 使用方法
 
+调用 Kernel.Start_Work()
+
 ## 5. 目前包含的包
 
 #### 1. File_Filter (PKG)
@@ -57,3 +59,17 @@
 - 提供 API：
 
   - OutInfo(srcfile):从 srcfile 中读取信息并且打印
+
+## 6.标准配置文件格式
+
+1. Userinfo
+
+   1. `ID的格式xx为id号码 暂定10位 系统会截取后6位`
+   2. `yyy-xxx` yyy 为用户信息的键 xxx 为值
+2. KeyWords
+
+   1. 直接每行一个关键词即可
+3. DemandInfo
+
+   1. yyy 为三位
+   2. `yyy-xxx` yyy 为需求编码 xxx 为需求内容

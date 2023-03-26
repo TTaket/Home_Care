@@ -12,6 +12,7 @@ def ChooseWords(Words):
     try:
         handle.ParameterInvaild(Words)
     except conf.Customization_Error as err:
+        logging.info(err.info)
         print (err.info)
         exit()
     else:

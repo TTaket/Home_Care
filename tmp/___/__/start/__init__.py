@@ -3,5 +3,5 @@ from . import End
 from . import Run
 
 Begin = Begin.Begin
-Run = Run.Run
+ChooseWords = Run.ChooseWords
 End = End.End

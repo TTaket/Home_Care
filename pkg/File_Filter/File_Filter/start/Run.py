@@ -15,9 +15,9 @@ def Run(Files,Keywords):
     except conf.Customization_Error as err:
         logging.error(err.info)
         print (err.info)
-        exit
+        exit()
     else:
-        logging.info("参数校验通过")
+        pass
 
     #创建并且打开一个存储答案的文档
     fans = open(conf.FF_ANSFILE,'w',encoding='utf-8')    
@@ -27,11 +27,9 @@ def Run(Files,Keywords):
         #打开导入文件
         f = open(path,'r',encoding='utf-8')
         finfo = f.read()
-        logging.info("打开的文件路径:{}".format(os.path.abspath(path)))
-        
         #对文本中出现的关键字进行频率调查
         Now_Matchallword = handle.MatchWord(finfo,Keywords)
-        #Todo: 存在并发问题 需上锁
+
         for k,v in Now_Matchallword.items():
             All_num = Matchallword.get(k)
             if  All_num == None:
@@ -46,15 +44,10 @@ def Run(Files,Keywords):
     #MatchChooseWord = handle.ChooseWord(Matchallword)
     MatchChooseWord = Matchallword.keys()
 
-    if len(MatchChooseWord) == 0:
-        return False
-    else:
-        for word in MatchChooseWord:
-            fans.write("{}\n".format(word))
-            logging.info("FF找到的关键词有: {}".format(word))
-    
+    for word in MatchChooseWord:
+        fans.write("{}\n".format(word))
+        logging.info("5.FF找到的关键词有: {}".format(word))
     
     #关闭所有的文件
     fans.close()
-    logging.info("关闭文件")
-    return True
+    logging.info("5.关闭文件")

@@ -10,7 +10,6 @@ def ParameterInvaild(Info):
     #验证info是否为空
     if len(Info) == 0:
         WrongInfo = (f"3.参数校验不合法： Info为空{Info}")
-        logging.error(WrongInfo)
         raise conf.Customization_Error(WrongInfo) 
 
     logging.info("3.参数校验一切正常")

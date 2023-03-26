@@ -14,5 +14,5 @@ os.chdir(conf.BASEPATH)
 
 #logging 的初始化
 Init.Log()
-print ("logging运行")
-logging.info("logging开始运行...")
+print ("Kernel:logging运行")
+logging.info("Kernel:logging开始运行...")

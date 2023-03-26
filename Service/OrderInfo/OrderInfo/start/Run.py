@@ -12,9 +12,9 @@ def Run(User , Demand , KeyWord):
     except conf.Customization_Error as err:
         logging.error(err.info)
         print (err.info)
-        exit
+        exit()
     else:
-        logging.info("参数校验通过")
+        pass
  
     #创建并且打开一个存储答案的文档
     fans = open(conf.ORDERINFO_OUTFILE,'w',encoding='utf-8') 
@@ -24,10 +24,9 @@ def Run(User , Demand , KeyWord):
     except conf.Customization_Error as err:
         logging.error(err.info)
         print (err.info)
-        exit
+        exit()
     else:
-        print ("订单号生成成功")
-        logging.info("订单号生成成功")
+        pass
     
     #发送订单
     ret = handle.OrderSend(OrderInfo)
@@ -35,4 +34,4 @@ def Run(User , Demand , KeyWord):
     fans.writelines(ret +'\n')
     #关闭所有的文件
     fans.close()
-    logging.info("关闭文件")
+    logging.info("6.关闭导出文件文件")

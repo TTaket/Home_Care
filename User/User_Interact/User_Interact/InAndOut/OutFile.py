@@ -14,7 +14,6 @@ def OutFile(Path , Name):
     flag1 = os.path.exists(conf.USERINTERACT_OUTFILE)
     if flag1 == False:
         WrongInfo = "无法在输出缓冲区找到需求信息"
-        logging.error(WrongInfo)
         raise conf.Customization_Error(WrongInfo)
     
     logging.info("6.成功在输出缓冲区找到需求信息")

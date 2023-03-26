@@ -1,70 +1,96 @@
-2023-03-26 16:38:47,131 - INFO  <module> : logging开始运行...
-2023-03-26 16:38:47,190 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_1.txt
-2023-03-26 16:38:47,190 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_1.txt 导入成功
-2023-03-26 16:38:47,190 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_2.txt
-2023-03-26 16:38:47,190 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_2.txt 导入成功
-2023-03-26 16:38:47,190 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_3.txt
-2023-03-26 16:38:47,191 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_3.txt 导入成功
-2023-03-26 16:38:47,191 - INFO  Begin : File初始化结果['/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_3.txt']
-2023-03-26 16:38:47,191 - INFO  ParameterInvaild : path: ['/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_3.txt'] , KeyWords: ['吃饭', '洗澡', '音乐', '视频']
-2023-03-26 16:38:47,191 - INFO  Run : 参数校验通过
-2023-03-26 16:38:47,191 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_1.txt
-2023-03-26 16:38:47,191 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡', '音乐', '视频']
-2023-03-26 16:38:47,191 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_2.txt
-2023-03-26 16:38:47,191 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡', '音乐', '视频']
-2023-03-26 16:38:47,191 - INFO  MatchWord : 添加关键词:吃饭 其出现次数：1
-2023-03-26 16:38:47,191 - INFO  MatchWord : 添加关键词:洗澡 其出现次数：1
-2023-03-26 16:38:47,191 - INFO  Run : 打开的文件路径:/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_3.txt
-2023-03-26 16:38:47,191 - INFO  MatchWord : 传入的关键词集合： Keyword: ['吃饭', '洗澡', '音乐', '视频']
-2023-03-26 16:38:47,191 - INFO  Run : FF找到的关键词有: 吃饭
-2023-03-26 16:38:47,191 - INFO  Run : FF找到的关键词有: 洗澡
-2023-03-26 16:38:47,191 - INFO  Run : 关闭文件
-2023-03-26 16:38:47,191 - INFO  OutFile : 导出后文件路径为/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
-2023-03-26 16:38:47,192 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Filelist.txt
-2023-03-26 16:38:47,192 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/
-2023-03-26 16:38:47,192 - INFO  ClearOutFile : 删除/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/Out/tmpfile.txt
-2023-03-26 16:38:47,192 - INFO  SetFile : 1.即将检验传入的文件是否可以打开:/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
-2023-03-26 16:38:47,192 - INFO  SetFile : 1.传入文件可以打开
-2023-03-26 16:38:47,192 - INFO  SetFile : 1.导入后文件路径为/home/ljy/LJY/code-dir/Home_care/User/User_Interact/In/tmpfile.txt
-2023-03-26 16:38:47,192 - INFO  SetFile : 1.导入成功
-2023-03-26 16:38:47,192 - INFO  WordInit : 2.初始化的Words内容为['吃饭', '洗澡']
-2023-03-26 16:38:47,192 - INFO  ParameterInvaild : 3.即将校验的Words为['吃饭', '洗澡']
-2023-03-26 16:38:47,192 - INFO  ParameterInvaild : 3.参数校验一切正常
-2023-03-26 16:38:47,192 - INFO  ChooseWords : 4.选择的疑似需求集合 :['吃饭', '洗澡', 'sys:当前没有找到需求 如果你想退出请选择 -1']
-2023-03-26 16:38:48,562 - INFO  ChooseWords : 4.用户确定的需求是: ['吃饭']
-2023-03-26 16:38:48,563 - INFO  ChooseWords : 5.关闭临时文件
-2023-03-26 16:38:48,563 - INFO  OutFile : 6.即将检验缓冲区是否有需求信息
-2023-03-26 16:38:48,563 - INFO  OutFile : 6.成功在输出缓冲区找到需求信息
-2023-03-26 16:38:48,563 - INFO  OutFile : 6.即将尝试从/home/ljy/LJY/code-dir/Home_care/User/User_Interact/Out/tmpfile.txt导出文件到/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
-2023-03-26 16:38:48,563 - INFO  OutFile : 6.导出成功
-2023-03-26 16:38:48,563 - INFO  ClearInFile : 7.删除/home/ljy/LJY/code-dir/Home_care/User/User_Interact/In/tmpfile.txt
-2023-03-26 16:38:48,563 - INFO  ClearOutFile : 7.删除/home/ljy/LJY/code-dir/Home_care/User/User_Interact/Out/tmpfile.txt
-2023-03-26 16:38:48,563 - INFO  SetFile : 导入后文件路径为/home/ljy/LJY/code-dir/Home_care/Service/OrderInfo/In/tmpfile.txt
-2023-03-26 16:38:48,563 - INFO  SetFile : File /home/ljy/LJY/code-dir/Home_care/Service/OrderInfo/In/tmpfile.txt 导入成功
-2023-03-26 16:38:48,563 - INFO  UserInfoInit : 生成的UserInfo信息为:
-2023-03-26 16:38:48,563 - INFO  Begin : User初始化结果{'ID': '2104010209'}
-2023-03-26 16:38:48,563 - INFO  DemandInfoInit : 生成的DemandInfo信息为:
-2023-03-26 16:38:48,564 - INFO  Begin : Demand初始化结果{'吃饭': '101', '洗澡': '102'}
-2023-03-26 16:38:48,564 - INFO  Begin : KeyWord初始化结果['吃饭']
-2023-03-26 16:38:48,564 - INFO  ParameterInvaild : User: {'ID': '2104010209'} , Demand: {'吃饭': '101', '洗澡': '102'} , KeyWords: ['吃饭']
-2023-03-26 16:38:48,564 - INFO  Run : 参数校验通过
-2023-03-26 16:38:48,564 - INFO  OrderGen : 获取的用户ID 为010209
-2023-03-26 16:38:48,564 - INFO  OrderGen : 获取的需求ID 为101
-2023-03-26 16:38:48,564 - INFO  OrderGen : 获取的时间 为230326163848
-2023-03-26 16:38:48,564 - INFO  OrderGen : 生成的OrderID 为230326163848010209101
-2023-03-26 16:38:48,564 - INFO  Run : 订单号生成成功
-2023-03-26 16:38:48,564 - INFO  SendHttpMsg : 参数校验通过
-2023-03-26 16:38:48,564 - INFO  __MsgBase : {'MsgType': '1001', 'MsgInfo': '230326163848010209101'}
-2023-03-26 16:38:48,708 - INFO  Run : 关闭文件
-2023-03-26 16:38:48,708 - INFO  OutFile : 导出后文件路径为/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
-2023-03-26 16:38:48,709 - INFO  ClearInFile : 删除/home/ljy/LJY/code-dir/Home_care/Service/OrderInfo/In/tmpfile.txt
-2023-03-26 16:38:48,709 - INFO  OutInfo : -----进入OutInfo部分-----
-2023-03-26 16:38:48,709 - INFO  SetFile : 1.即将检验传入的文件是否可以打开:/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
-2023-03-26 16:38:48,709 - INFO  SetFile : 1.传入文件可以打开
-2023-03-26 16:38:48,709 - INFO  SetFile : 1.导入后文件路径为/home/ljy/LJY/code-dir/Home_care/User/User_OutInfo/In/tmpfile.txt
-2023-03-26 16:38:48,709 - INFO  SetFile : 1.导入成功
-2023-03-26 16:38:48,709 - INFO  InfoInit : 2.初始化的info内容为吃饭请求测试
-2023-03-26 16:38:48,709 - INFO  ParameterInvaild : 3.即将校验的Info为['吃饭请求测试']
-2023-03-26 16:38:48,709 - INFO  ParameterInvaild : 3.参数校验一切正常
-2023-03-26 16:38:48,709 - INFO  User_OutInfo : 4.打印到终端的内容为['吃饭请求测试']
-2023-03-26 16:38:48,715 - INFO  ClearInFile : 5.删除/home/ljy/LJY/code-dir/Home_care/User/User_OutInfo/In/tmpfile.txt
+2023-03-26 20:07:32,775 - INFO  <module> : Kernel:logging开始运行...
+2023-03-26 20:07:32,834 - INFO  Start_Work : Kernel:进入语音读入模块
+2023-03-26 20:07:32,835 - INFO  Start_Work : Kernel:进入关键词读取模块
+2023-03-26 20:07:32,835 - INFO  SetFile : 1.进行文件读取测试/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/Files/test_1.txt
+2023-03-26 20:07:32,835 - INFO  SetFile : 1.测试成功
+2023-03-26 20:07:32,835 - INFO  SetFile : 1.导入后文件路径为/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_1.txt
+2023-03-26 20:07:32,835 - INFO  SetFile : 1.导入成功
+2023-03-26 20:07:32,835 - INFO  SetFile : 1.进行文件读取测试/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/Files/test_2.txt
+2023-03-26 20:07:32,835 - INFO  SetFile : 1.测试成功
+2023-03-26 20:07:32,835 - INFO  SetFile : 1.导入后文件路径为/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_2.txt
+2023-03-26 20:07:32,835 - INFO  SetFile : 1.导入成功
+2023-03-26 20:07:32,835 - INFO  SetFile : 1.进行文件读取测试/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/Files/test_3.txt
+2023-03-26 20:07:32,835 - INFO  SetFile : 1.测试成功
+2023-03-26 20:07:32,835 - INFO  SetFile : 1.导入后文件路径为/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_3.txt
+2023-03-26 20:07:32,835 - INFO  SetFile : 1.导入成功
+2023-03-26 20:07:32,835 - INFO  KeyWordInit : 2.初始化的关键词为['吃饭', '洗澡', '音乐', '视频']
+2023-03-26 20:07:32,835 - INFO  FileInit : 2.初始化的文件为['/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_1.txt', '/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_2.txt', '/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/test_3.txt']
+2023-03-26 20:07:32,835 - INFO  ParameterInvaild : 3.尝试进行参数检验
+2023-03-26 20:07:32,835 - INFO  ParameterInvaild : 3.参数检验通过
+2023-03-26 20:07:32,836 - INFO  MatchWord : 4.进行匹配的关键词集合： Keyword: ['吃饭', '洗澡', '音乐', '视频']
+2023-03-26 20:07:32,836 - INFO  MatchWord : 4.匹配结束:结果如下{}
+2023-03-26 20:07:32,836 - INFO  MatchWord : 4.进行匹配的关键词集合： Keyword: ['吃饭', '洗澡', '音乐', '视频']
+2023-03-26 20:07:32,836 - INFO  MatchWord : 4.添加关键词:吃饭 其出现次数：1
+2023-03-26 20:07:32,836 - INFO  MatchWord : 4.添加关键词:洗澡 其出现次数：1
+2023-03-26 20:07:32,836 - INFO  MatchWord : 4.匹配结束:结果如下{'吃饭': 1, '洗澡': 1}
+2023-03-26 20:07:32,836 - INFO  MatchWord : 4.进行匹配的关键词集合： Keyword: ['吃饭', '洗澡', '音乐', '视频']
+2023-03-26 20:07:32,836 - INFO  MatchWord : 4.匹配结束:结果如下{}
+2023-03-26 20:07:32,836 - INFO  Run : 5.FF找到的关键词有: 吃饭
+2023-03-26 20:07:32,836 - INFO  Run : 5.FF找到的关键词有: 洗澡
+2023-03-26 20:07:32,836 - INFO  Run : 5.关闭文件
+2023-03-26 20:07:32,836 - INFO  OutFile : 6.尝试把输出缓冲区信息导出到/home/ljy/LJY/code-dir/Home_care/Kernel/tmp
+2023-03-26 20:07:32,836 - INFO  OutFile : 6.成功在输出缓冲区找到需求信息
+2023-03-26 20:07:32,836 - INFO  OutFile : 6.文件从/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/Out/tmpfile.txt导出到/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
+2023-03-26 20:07:32,836 - INFO  OutFile : 6.导出成功
+2023-03-26 20:07:32,836 - INFO  ClearInFile : 7.删除/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Filelist.txt
+2023-03-26 20:07:32,836 - INFO  ClearInFile : 7.删除/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/In/Files/
+2023-03-26 20:07:32,836 - INFO  ClearOutFile : 7.删除/home/ljy/LJY/code-dir/Home_care/pkg/File_Filter/Out/tmpfile.txt
+2023-03-26 20:07:32,837 - INFO  Start_Work : Kernel:进入交互确定模块
+2023-03-26 20:07:32,837 - INFO  ChooseWords : -----进入UserInteract ChooseWords部分-----
+2023-03-26 20:07:32,837 - INFO  SetFile : 1.即将检验传入的文件是否可以打开:/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
+2023-03-26 20:07:32,837 - INFO  SetFile : 1.传入文件可以打开
+2023-03-26 20:07:32,837 - INFO  SetFile : 1.导入后文件路径为/home/ljy/LJY/code-dir/Home_care/User/User_Interact/In/tmpfile.txt
+2023-03-26 20:07:32,837 - INFO  SetFile : 1.导入成功
+2023-03-26 20:07:32,837 - INFO  WordInit : 2.初始化的Words内容为['吃饭', '洗澡']
+2023-03-26 20:07:32,837 - INFO  ParameterInvaild : 3.即将校验的Words为['吃饭', '洗澡']
+2023-03-26 20:07:32,837 - INFO  ParameterInvaild : 3.参数校验一切正常
+2023-03-26 20:07:32,837 - INFO  ChooseWords : 4.选择的疑似需求集合 :['吃饭', '洗澡', 'sys:当前没有找到需求 如果你想退出请选择 -1']
+2023-03-26 20:07:34,367 - INFO  ChooseWords : 4.用户确定的需求是: ['吃饭']
+2023-03-26 20:07:34,367 - INFO  ChooseWords : 5.关闭临时文件
+2023-03-26 20:07:34,367 - INFO  OutFile : 6.即将检验缓冲区是否有需求信息
+2023-03-26 20:07:34,367 - INFO  OutFile : 6.成功在输出缓冲区找到需求信息
+2023-03-26 20:07:34,367 - INFO  OutFile : 6.即将尝试从/home/ljy/LJY/code-dir/Home_care/User/User_Interact/Out/tmpfile.txt导出文件到/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
+2023-03-26 20:07:34,367 - INFO  OutFile : 6.导出成功
+2023-03-26 20:07:34,368 - INFO  ClearInFile : 7.删除/home/ljy/LJY/code-dir/Home_care/User/User_Interact/In/tmpfile.txt
+2023-03-26 20:07:34,368 - INFO  ClearOutFile : 7.删除/home/ljy/LJY/code-dir/Home_care/User/User_Interact/Out/tmpfile.txt
+2023-03-26 20:07:34,368 - INFO  Start_Work : Kernel:进入分发过程模块
+2023-03-26 20:07:34,368 - INFO  Start_Work : Kernel:进入订单模块
+2023-03-26 20:07:34,368 - INFO  OrderInfo : -----进入OrderInfo OrderInfo部分-----
+2023-03-26 20:07:34,368 - INFO  SetFile : 1.即将检验传入的文件是否可以打开:/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
+2023-03-26 20:07:34,368 - INFO  SetFile : 1.传入文件可以打开
+2023-03-26 20:07:34,368 - INFO  SetFile : 1.导入后文件路径为/home/ljy/LJY/code-dir/Home_care/Service/OrderInfo/In/tmpfile.txt
+2023-03-26 20:07:34,368 - INFO  SetFile : 1.导入成功
+2023-03-26 20:07:34,368 - INFO  UserInfoInit : 2.生成的UserInfo信息为:{'ID': '2104010209'}
+2023-03-26 20:07:34,368 - INFO  DemandInfoInit : 2.生成的DemandInfo信息为:{'吃饭': '101', '洗澡': '102'}
+2023-03-26 20:07:34,368 - INFO  KeyWordInit : 2.生成的KeyWord信息为:['吃饭']
+2023-03-26 20:07:34,368 - INFO  ParameterInvaild : 3.即将进行参数匹配
+2023-03-26 20:07:34,368 - INFO  ParameterInvaild : 3.参数匹配一切正常
+2023-03-26 20:07:34,368 - INFO  OrderGen : 4.即将进行订单ID的生成
+2023-03-26 20:07:34,368 - INFO  OrderGen : 4.获取的用户ID 为010209
+2023-03-26 20:07:34,368 - INFO  OrderGen : 4.获取的需求ID 为101
+2023-03-26 20:07:34,368 - INFO  OrderGen : 4.获取的时间 为230326200734
+2023-03-26 20:07:34,368 - INFO  OrderGen : 4.生成的OrderID 为230326200734010209101
+2023-03-26 20:07:34,368 - INFO  OrderSend : 5.准备发送信息230326200734010209101
+2023-03-26 20:07:34,368 - INFO  __MsgBase : 网络接口被调用:要求发送信息为{'MsgType': '1001', 'MsgInfo': '230326200734010209101'}
+2023-03-26 20:07:34,498 - INFO  __MsgBase : 网络接口被调用:返回信息为header:{'Content-Type': 'application/json; charset=utf-8', 'Date': 'Sun, 26 Mar 2023 12:07:34 GMT', 'Content-Length': '49'},status_code:200,json:{'MsgType': '1002', 'MsgInfo': '吃饭请求测试'}
+2023-03-26 20:07:34,498 - INFO  Run : 6.关闭导出文件文件
+2023-03-26 20:07:34,498 - INFO  OutFile : 7.即将检验缓冲区是否有需求信息
+2023-03-26 20:07:34,498 - INFO  OutFile : 7.成功在输出缓冲区找到需求信息
+2023-03-26 20:07:34,498 - INFO  OutFile : 7.即将尝试从/home/ljy/LJY/code-dir/Home_care/Service/OrderInfo/Out/tmpfile.txt导出文件到/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
+2023-03-26 20:07:34,498 - INFO  OutFile : 7.导出成功
+2023-03-26 20:07:34,498 - INFO  ClearInFile : 8.删除/home/ljy/LJY/code-dir/Home_care/Service/OrderInfo/In/tmpfile.txt
+2023-03-26 20:07:34,498 - INFO  ClearOutFile : 8.删除/home/ljy/LJY/code-dir/Home_care/Service/OrderInfo/Out/tmpfile.txt
+2023-03-26 20:07:34,499 - INFO  Start_Work : Kernel:进入输出模块
+2023-03-26 20:07:34,499 - INFO  OutInfo : -----进入UserOutInfo OutInfo部分-----
+2023-03-26 20:07:34,499 - INFO  SetFile : 1.即将检验传入的文件是否可以打开:/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
+2023-03-26 20:07:34,499 - INFO  SetFile : 1.传入文件可以打开
+2023-03-26 20:07:34,499 - INFO  SetFile : 1.导入后文件路径为/home/ljy/LJY/code-dir/Home_care/User/User_OutInfo/In/tmpfile.txt
+2023-03-26 20:07:34,499 - INFO  SetFile : 1.导入成功
+2023-03-26 20:07:34,499 - INFO  InfoInit : 2.初始化的info内容为吃饭请求测试
+2023-03-26 20:07:34,499 - INFO  ParameterInvaild : 3.即将校验的Info为['吃饭请求测试']
+2023-03-26 20:07:34,499 - INFO  ParameterInvaild : 3.参数校验一切正常
+2023-03-26 20:07:34,499 - INFO  User_OutInfo : 4.打印到终端的内容为['吃饭请求测试']
+2023-03-26 20:07:34,499 - INFO  ClearInFile : 5.删除/home/ljy/LJY/code-dir/Home_care/User/User_OutInfo/In/tmpfile.txt
+2023-03-26 20:07:34,499 - INFO  ClearOutFile : Kernel:删除/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/tmpfile.txt
+2023-03-26 20:07:34,499 - INFO  ClearOutFile : Kernel:删除/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/FilePaths.txt
+2023-03-26 20:07:34,499 - INFO  ClearOutFile : Kernel:删除/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/Files

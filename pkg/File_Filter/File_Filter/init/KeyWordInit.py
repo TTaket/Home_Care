@@ -11,4 +11,5 @@ def KeyWordInit():
         if len(word) == 0 or word[0] == '#':
             continue;
         KeyWords.append(word)
+    logging.info(f"2.初始化的关键词为{KeyWords}")
     return KeyWords

@@ -9,7 +9,10 @@ def KeyWordInit():
     f = open(conf.ORDERINFO_INFILE,'r',encoding='utf-8')    
     flist = f.read().splitlines()
     for tmp in flist:
+        #跳过所有的空行和注释
         if len(tmp) == 0 or tmp[0] == '#':
             continue;
-        rets.append(tmp)
+        else: 
+            rets.append(tmp)
+    logging.info(f"2.生成的KeyWord信息为:{rets}")
     return rets

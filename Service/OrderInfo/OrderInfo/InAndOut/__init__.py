@@ -1,7 +1,7 @@
 from . import SetFile
 from . import ClearInFile
-from . import OutFile
 from . import ClearOutFile
+from . import OutFile
 
 ClearInFile = ClearInFile.ClearInFile
 ClearOutFile = ClearOutFile.ClearOutFile
