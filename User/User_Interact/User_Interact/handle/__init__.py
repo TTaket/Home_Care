@@ -1,5 +1,5 @@
-from . import InteractUser
+from . import ChooseWords
 from . import ParameterInvaild
 
-ChooseWords = InteractUser.InteractUser_ChooseWords
+ChooseWords = ChooseWords.ChooseWords
 ParameterInvaild = ParameterInvaild.ParameterInvaild

@@ -5,7 +5,7 @@ import pkg as pkg
 import logging
 import os
 
-def Deal():
+def Start_Work():
     #取消标记
     while True:
         #1.进行语音输入 把文件发送到ff的缓冲区里面
@@ -23,7 +23,7 @@ def Deal():
         pkg.FFDeal(fflist , conf.KERNELTMPPATH)
 
         #3.交互确定是否是这个需求 
-        User.ChooseWords(conf.KERNELTMPPATH , conf.KERNELTMPPATH)
+        User.ChooseWords(conf.KERNELTMPPATH+conf.TMPFILE , conf.KERNELTMPPATH)
         
         #打开文件把关键词读取出来
         f = open(conf.KERNELTMPPATH+conf.TMPFILE , 'r' ,encoding="utf-8")

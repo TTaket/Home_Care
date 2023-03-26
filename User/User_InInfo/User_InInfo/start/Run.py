@@ -2,7 +2,7 @@
 import os
 import logging 
 import  conf.conf as conf
-import  pkg.yuyin_files as yuyin_files
+#import  pkg.SpeechAndText as SpeechAndText
 import  User.User_InInfo.User_InInfo.handle as handle 
 
 #主体运行程序

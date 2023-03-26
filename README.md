@@ -50,3 +50,10 @@
 - 提供 API：
 
   - ChooseWords(src , desc):从 src 中读取关键字进行询问 询问后生成到 desc 中
+
+#### 5. User_OutInfo（User）
+
+- 主要目的： 把信息打印到用户终端
+- 提供 API：
+
+  - OutInfo(srcfile):从 srcfile 中读取信息并且打印

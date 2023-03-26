@@ -1,6 +1,6 @@
-from . import FileInit
+from . import WordInit
 
 #文件初始化
-File = FileInit.FileInit
+Word = WordInit.WordInit
 
 

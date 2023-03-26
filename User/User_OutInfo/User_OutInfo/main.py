@@ -5,7 +5,7 @@ import  conf.conf as conf
 import  logging
 
 def OutInfo(srcfile):
-    logging.info("-----进入OutInfo部分-----")
+    logging.info("-----进入UserOutInfo OutInfo部分-----")
     path = srcfile
     InAndOut.SetFile(path)
     lis = start.Begin()

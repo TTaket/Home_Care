@@ -1,3 +1,4 @@
 import Kernel
 
-Kernel.Deal()
+#模拟按键启动
+Kernel.Start_Work()

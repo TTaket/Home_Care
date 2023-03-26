@@ -1,16 +1,18 @@
 import os
 import logging 
-import  conf.conf as conf
+import conf.conf as conf
 
 
 #ParameterInvaild
-#
-#
-def ParameterInvaild(KeyWords):
-    logging.info("KeyWords: {}".format(KeyWords))
-    #验证KeyWords是否非空
-    if len(KeyWords) == 0:
-        raise conf.Customization_Error(f"参数校验不合法： KeyWords为空 {KeyWords}") 
+#检验传入的关键词集合是否为空
+def ParameterInvaild(Words):
+    logging.info(f"3.即将校验的Words为{Words}")
     
+    #验证info是否为空
+    if len(Words) == 0:
+        WrongInfo = (f"3.参数校验不合法： Words为空{Words}")
+        logging.error(WrongInfo)
+        raise conf.Customization_Error(WrongInfo) 
+
+    logging.info("3.参数校验一切正常")
     #一切正常
-    pass

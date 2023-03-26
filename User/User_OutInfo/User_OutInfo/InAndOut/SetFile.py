@@ -3,7 +3,7 @@ import os
 import logging
 import shutil
 
-#xx_INPATH 改成对应的
+
 def SetFile(Path):
     #尝试验证该路径是否能够正常打开和读取内容
     Path = os.path.abspath(Path)
