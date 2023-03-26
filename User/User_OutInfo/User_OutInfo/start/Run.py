@@ -4,28 +4,18 @@ import logging
 import  conf.conf as conf
 
 #修改位置
-import handle 
+import  User.User_OutInfo.User_OutInfo.handle as handle
 
 #主体运行程序
-def Run(xx, yy):
-    
-    
+def ChooseWords(Info):
     #首先进行参数校验
     try:
-        handle.ParameterInvaild(xx , yy)
+        handle.ParameterInvaild(Info)
     except conf.Customization_Error as err:
         logging.error(err.info)
         print (err.info)
         exit
     else:
-        logging.info("参数校验通过")
+        pass
 
-    #创建并且打开一个存储答案的文档
-    fans = open(conf.xx_ANSFILE,'w',encoding='utf-8')    
-    
-   
-    
-    #关闭所有的文件
-    fans.close()
-    logging.info("关闭文件")
-    return True
+    handle.OutInfo(Info)

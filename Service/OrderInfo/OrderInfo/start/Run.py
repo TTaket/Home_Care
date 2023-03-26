@@ -5,7 +5,7 @@ import  conf.conf as conf
 import  Service.OrderInfo.OrderInfo.handle as handle
 
 #主体运行程序
-def Run(User , Demand , KeyWord ,url):
+def Run(User , Demand , KeyWord):
     #首先进行参数校验
     try:
         handle.ParameterInvaild(User , Demand , KeyWord)
@@ -16,6 +16,9 @@ def Run(User , Demand , KeyWord ,url):
     else:
         logging.info("参数校验通过")
  
+    #创建并且打开一个存储答案的文档
+    fans = open(conf.ORDERINFO_OUTFILE,'w',encoding='utf-8') 
+
     try:
         OrderInfo = handle.OrderGen(KeyWord[0] ,User , Demand)
     except conf.Customization_Error as err:
@@ -27,6 +30,9 @@ def Run(User , Demand , KeyWord ,url):
         logging.info("订单号生成成功")
     
     #发送订单
-    ret = handle.OrderSend(OrderInfo , url)
-
-    return ret
+    ret = handle.OrderSend(OrderInfo)
+    
+    fans.writelines(ret +'\n')
+    #关闭所有的文件
+    fans.close()
+    logging.info("关闭文件")

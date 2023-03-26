@@ -1,13 +1,14 @@
 #设置位置
-import InAndOut
-import start
+import  User.User_OutInfo.User_OutInfo.InAndOut as InAndOut
+import  User.User_OutInfo.User_OutInfo.start as start
+import  conf.conf as conf
+import  logging
 
-
-def deal(src , desc):
-    for path in src:
-        InAndOut.SetFile(path)
-    t = start.Begin()
-    start.Run(t[0] ,t[1])
-    InAndOut.OutFile(desc)
+def OutInfo(srcfile):
+    logging.info("-----进入OutInfo部分-----")
+    path = srcfile
+    InAndOut.SetFile(path)
+    lis = start.Begin()
+    start.ChooseWords(lis)
     start.End()
     

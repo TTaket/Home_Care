@@ -18,19 +18,17 @@
 │   └── tmp #临时缓冲区
 ├── log #--日志
 │   └── HomeCare_log.txt
-├── main.py  
-├── pkg
-│   ├── File_Filter
-│   └── yuyin_files
+├── main.py
+├── pkg#--包内容
+│   ├── File_Filter#ff 包
+│   └── yuyin_files#语音识别包
 ├── README.md
-├── Service
+├── Service#--服务模块
 │   ├── OrderInfo
 │   └── Web_Service
-├── tmp
-│   └── \_\_\_
-└── User
+├── tmp#临时文件
+│   └── \_\_\_#--模板
+└── User#--用户模块
 ├── User_InInfo
 ├── User_Interact
 └── User_OutInfo
-
-27 directories, 16 files

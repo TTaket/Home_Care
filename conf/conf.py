@@ -1,17 +1,13 @@
 import os
 
 #用户自定义错误
-#Customization error
-#Using: 
-#    Customization_Error(problem)
 class Customization_Error(RuntimeError):
     def __init__(self , arg):
         self.info = arg
     def __str__(self):
         return str(self.info)
 
-
-
+#---------------------Kernel部分
 # 目录路径
 LOGPATH = str(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + "/log/HomeCare_log.txt"
 
@@ -44,6 +40,7 @@ TMPFILE = "tmpfile.txt"
 Orderlist = {"吃饭","洗澡"}
 locallist = {"音乐","视频"}
 
+
 #---------------------File_Filter模块
 # FF输入缓冲区路径
 FF_INPATH = BASEPATH+"/pkg/File_Filter/In"
@@ -75,6 +72,14 @@ ORDERINFO_INFILE = ORDERINFO_INPATH+"/"+TMPFILE
 ORDERINFO_OUTFILE = ORDERINFO_OUTPATH+"/"+TMPFILE
 
 
+#---------------------User_OutInfo 模块
+# User_OutInfo输入缓冲区路径
+USEROUTINFO_INPATH = BASEPATH+"/User/User_OutInfo/In"
+
+# User_OutInfo传入文件位置
+USEROUTINFO_INFILE = USEROUTINFO_INPATH+"/"+TMPFILE
+
+
 #---------------------User_Interact 模块
 # User_Interact输入缓冲区路径
 USERINTERACT_INPATH = BASEPATH+"/User/User_Interact/In"
@@ -88,6 +93,7 @@ USERINTERACT_INFILE = USERINTERACT_INPATH+"/"+TMPFILE
 # User_Interact临时答案文件
 USERINTERACT_OUTFILE = USERINTERACT_OUTPATH+"/"+TMPFILE
 
+
 #---------------------Web_Service 模块
 #定义关键字
 ORDERMSGREQ = "1001"
@@ -95,8 +101,8 @@ ORDERMSGRESP = "1002"
 TypeList = {ORDERMSGREQ}
 
 #定义url
-TESTURL = "http://43.138.161.192:8080/Order"
-UrlList = {TESTURL}
+ORDERINFO_URL = "http://43.138.161.192:8080/Order"
+UrlList = {ORDERINFO_URL}
 
 #定义信息最大大小 目前为1M
 INFOMAXSIZE = 1024*1024

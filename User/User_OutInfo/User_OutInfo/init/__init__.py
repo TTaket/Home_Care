@@ -1,6 +1,6 @@
-from . import xxInit
+from . import InfoInit
 
 #文件初始化
-xx = xxInit.xxInit
+Info = InfoInit.InfoInit
 
 

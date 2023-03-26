@@ -1,5 +1,4 @@
-#from . import xx
+from . import User_OutInfo
 
 #出口函数
-#Deal = xx.Deal
-
+OutInfo = User_OutInfo.OutInfo

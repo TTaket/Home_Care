@@ -1,4 +1,3 @@
-
 import conf.conf as conf
 import Service as Service
 import User as User
@@ -7,6 +6,7 @@ import logging
 import os
 
 def Deal():
+    #取消标记
     while True:
         #1.进行语音输入 把文件发送到ff的缓冲区里面
         #语音读入和用户输入模块还没写先跳过第一步骤
@@ -23,16 +23,26 @@ def Deal():
         pkg.FFDeal(fflist , conf.KERNELTMPPATH)
 
         #3.交互确定是否是这个需求 
-        User.User_ChooseWords(conf.KERNELTMPPATH , conf.KERNELTMPPATH)
+        User.ChooseWords(conf.KERNELTMPPATH , conf.KERNELTMPPATH)
         
         #打开文件把关键词读取出来
         f = open(conf.KERNELTMPPATH+conf.TMPFILE , 'r' ,encoding="utf-8")
         words =  f.read().splitlines()
         retword = []
         for word in words:
+            #空行和注释内容跳过
             if len(word) == 0 or word[0]=='#':
                 continue
 
+            #sys特殊处理
+            if len(word)>=3 and word[0:3] == "sys": #特殊选项
+                if word == "sys:强制退出":
+                    logging.info("用户自行选择退出")
+                    print("用户自行选择退出")
+                    exit()
+                else:
+                    continue
+            #常规内容
             retword.append(word) 
         #如果关键词为空 则返回
         if retword != []:
@@ -40,14 +50,19 @@ def Deal():
         else:
             print("本轮并没有识别出您的需求 请您重新说一次")
             logging.info("本轮并没有识别出您的需求 请您重新说一次")
-    
+        
     #4.根据识别的内容执行不同的函数 分为订单打印 音乐 等等
     if retword[0] in conf.Orderlist:
-        Service.OrderGenandSend(conf.KERNELTMPPATH+conf.TMPFILE , conf.TESTURL)
+        Service.OrderGenandSend(conf.KERNELTMPPATH+conf.TMPFILE , conf.KERNELTMPPATH)
     elif retword[0] in conf.locallist:
         pass
-    
-    #5. 结束
+    else:
+        pass
+
+    #5. 对用户进行输出
+    User.OutInfo(conf.KERNELTMPPATH+conf.TMPFILE)
+
+    #6. 结束运行
     exit()
 
 

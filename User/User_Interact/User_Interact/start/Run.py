@@ -30,4 +30,3 @@ def ChooseWords(KeyWords):
     #关闭所有的文件
     fans.close()
     logging.info("关闭文件")
-    return True
