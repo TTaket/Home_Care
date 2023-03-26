@@ -11,75 +11,42 @@
 根据关键词分发到不同的服务内容
 根据不同的服务内容执行不同的服务
 
-├── docs
+流程图：
 
-│ ├── problems.md
-
-│ └── 开发记录.md
-
-├── img
-
-├── Kernel
-
-│ ├── kernel.py
-
-│ └── tmp
-
-├── pkg
-
-│ ├── File_Filter
-
-│ └── yuyin
-
-├── README.md
-
-├── Service
-
-│ └── Web_Service
-
-└── User
+![1679795794372](image/README/1679795794372.png)
 
 ## 3. 服务内容
 
-## 4. 提供接口
+1. 订单生成
+
+## 4. 使用方法
 
 ## 5. 目前包含的包
 
-#### 1. File_Filter 包
+#### 1. File_Filter (PKG)
 
-- 主要目的： 实现文本->订单号
+- 主要目的： 实现文本->关键词
 - 提供 API：
 
-  - SetKeyWords()
-  - SetDemandInfo()
-  - SetFile()
-  - SetUserInfo()
-  - ClearInFile()
-  - ClearOutFile()
-  - Begin_dic = Begin(FileMode = 2 ,KeyWordMode = 2)
-  - Flag = Run(Begin_dic)
-  - End()
-  - OutFile(FilePath , Filename)
+  - Deal(src , desc) 从 src 中读取生成到 desc 中
 
-- 注意:
-
-  - 文件的根路径在 File_Filter 中 所以外界使用的时候应该先../从里面退出到达包外层
-
-- 包逻辑：
-
-  - 先用设置系列把文件加载到输入缓冲区
-  - 之后调用 Begin 把缓冲区内的设置读入程序
-  - 之后调用 InFile 向缓冲区内导入数据
-  - 之后调用 Run 执行逻辑
-  - 之后调用 OutFile 可以把输出缓冲区文件导出
-  - 之后调用 End 对缓冲区进行清理
-
-#### 2. Web_service 包
+#### 2. Web_service （Service）
 
 - 主要目的： 负责机器人和服务器后端的通讯
 - 提供 API：
 
   - HttpMsg(url , type , info)
 
-- 注意：文件的根路径在 File_Filter 中 所以外界使用的时候应该先../从里面退出到达包外层
-- 包逻辑：直接调用 HttpMsg 发送信息到指定位置 只须照顾好信息就可以 无需考虑封装
+#### 3. OrderInfo（Service）
+
+- 主要目的： 生成订单号并且发送到指定的 url（post 方法)
+- 提供 API：
+
+  - Deal(src , url) 把 src 中的关键词提取并且生成订单号发送到 url 中
+
+#### 4. User_Interact（User）
+
+- 主要目的： 用现有的关键词去与用户交互进行筛选
+- 提供 API：
+
+  - ChooseWords(src , desc):从 src 中读取关键字进行询问 询问后生成到 desc 中

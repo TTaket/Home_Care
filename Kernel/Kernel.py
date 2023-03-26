@@ -9,7 +9,7 @@ import os
 def Deal():
     while True:
         #1.进行语音输入 把文件发送到ff的缓冲区里面
-        #语音读入和用户模块还没写先跳过第一步骤
+        #语音读入和用户输入模块还没写先跳过第一步骤
 
         #2.把关键字进行提取发送到会Kernel里面
         f = open(conf.KERNELTMPFILELIST , 'r' ,encoding="utf-8")
