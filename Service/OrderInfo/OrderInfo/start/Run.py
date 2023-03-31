@@ -20,7 +20,7 @@ def Run(User , Demand , KeyWord):
     fans = open(conf.ORDERINFO_OUTFILE,'w',encoding='utf-8') 
 
     try:
-        OrderInfo = handle.OrderGen(KeyWord[0] ,User , Demand)
+        Orderdic = handle.OrderGen(KeyWord[0] ,User , Demand)
     except conf.Customization_Error as err:
         logging.error(err.info)
         print (err.info)
@@ -29,7 +29,7 @@ def Run(User , Demand , KeyWord):
         pass
     
     #发送订单
-    ret = handle.OrderSend(OrderInfo)
+    ret = handle.OrderSend(Orderdic)
     
     fans.writelines(ret +'\n')
     #关闭所有的文件

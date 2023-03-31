@@ -74,7 +74,7 @@ def Start_Work():
     User.OutInfo(conf.KERNELTMPPATH+conf.TMPFILE)
 
     #6. 结束运行
-    ClearTmp.ClearOutFile()
+    #ClearTmp.ClearOutFile()
     exit()
 
 

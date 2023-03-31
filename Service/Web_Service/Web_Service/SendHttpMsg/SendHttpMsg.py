@@ -7,11 +7,11 @@ import json
 import Service.Web_Service.Web_Service.WebBase as WebBase
 import Service.Web_Service.Web_Service.SendHttpMsg.ParameterInvaild as ParameterInvaild
 
-def SendHttpMsg(url , typ , info):
+def SendHttpMsg(typ , dic):
     
     #进行参数校验
     try:
-        ParameterInvaild.Check(url , typ , info)
+        ParameterInvaild.Check(typ , dic)
     except conf.Customization_Error as err:
         logging.error(err.info)
         print (err.info)
@@ -22,13 +22,12 @@ def SendHttpMsg(url , typ , info):
     #匹配并进行发送信息
     match typ:
         case conf.ORDERMSGREQ:
-            info = conf.OrderMsgReq(info)
-            resp = WebBase.__MsgBase(url , info)
+            Msg = conf.OrderMsgReq(dic)
+            resp = WebBase.__MsgBase(conf.ORDERINFO_URL , Msg)
             retdic = json.loads(resp.text)
             if resp.status_code != 200:
+                print (resp.stauts_code , resp.text)
                 raise conf.Customization_Error("访问返回状态码非200")
-            if retdic["MsgType"] != conf.ORDERMSGRESP:
-                raise conf.Customization_Error("错误的回复格式")
             #一切正常
             return retdic["MsgInfo"]
         case _:

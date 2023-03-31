@@ -2,13 +2,8 @@ import logging
 import conf.conf as conf
 import sys
 
-def Check(url , typ , info):
-    if typ not in conf.TypeList:
-        WrongInfo = (f"网络接口:不存在这种信息类型{typ}")
-        raise conf.Customization_Error(WrongInfo)
-    if url not in conf.UrlList:
-        WrongInfo = (f"网络接口:不存在这个URL:{url}")
-        raise conf.Customization_Error(WrongInfo)
+def Check( typ , info):
+    
     
     #info不为空
     if sys.getsizeof(info) == 0: 

@@ -12,19 +12,14 @@ UrlList = {ORDERINFO_URL}
 INFOMAXSIZE = 1024*1024
 
 class WebMsg():#用于继承的父类
-    MsgType = "",
-    MsgInfo = ""
+    MsgType = ""
 
 #订单消息请求与订单消息回复
 class OrderMsgReq(WebMsg):
-    def __init__(self,info):
-        self.MsgType = ORDERMSGREQ
-        self.MsgInfo = info
+    def __init__(self,dic):
+        self.MsgUserID = dic["UserID"]
+        self.MsgDemandID = dic["DemandID"]
 
 class OrderMsgResp(WebMsg):
     def __init__(self,info):
-        self.MsgType = ORDERMSGRESP
         self.MsgInfo = info
-
-
-

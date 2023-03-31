@@ -1,6 +1,6 @@
 import time
 import logging
-import conf
+import conf.conf as conf
 
 
 #OrderGen
@@ -13,6 +13,7 @@ def OrderGen(keyword , UserInfo , Demand_dic):
         raise conf.Customization_Error("4.UserInfo中找不到ID标签")
     if len(UserInfo["ID"])<6 :
         raise conf.Customization_Error("4.UserInfo中的ID 过短无法截取")
+    AllUserID = UserInfo["ID"]
     UserID = UserInfo["ID"][-6:]
     logging.info("4.获取的用户ID 为{}".format(UserID))
     
@@ -31,5 +32,10 @@ def OrderGen(keyword , UserInfo , Demand_dic):
     OrderID = DateTime+UserID+DemandID
     logging.info("4.生成的OrderID 为{}".format(OrderID))
 
+    #生成字典
+    #dic ={"OrderID":OrderID , "DemandID":DemandID , "UserID":AllUserID}
+    #新版字典 没有订单号
+    dic ={"DemandID":DemandID , "UserID":AllUserID}
+    
     #生成对应订单
-    return OrderID
+    return dic
