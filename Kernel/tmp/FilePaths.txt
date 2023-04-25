@@ -3,6 +3,7 @@
 #如果想要注释掉必须顶格添加‘#’
 
 
-/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/Files/test_1.txt
-/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/Files/test_2.txt
-/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/Files/test_3.txt
+#/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/Files/test_1.txt
+#/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/Files/test_2.txt
+#/home/ljy/LJY/code-dir/Home_care/Kernel/tmp/Files/test_3.txt
+/home/pi/Home_care/Kernel/tmp/Files/tmpfile.txt

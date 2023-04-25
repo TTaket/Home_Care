@@ -1,13 +1,12 @@
 #设置位置
-import InAndOut
-import start
+import conf.conf as conf
+import pkg.SpeechAndText.SpeechAndText.InAndOut as InAndOut
+import pkg.SpeechAndText.SpeechAndText.start as start
 
-
-def deal(src , desc):
-    for path in src:
-        InAndOut.SetFile(path)
-    t = start.Begin()
-    start.Run(t[0] ,t[1])
-    InAndOut.OutFile(desc)
+#自动录音并且送回到中心缓冲区
+def StoT(desc):
+    #t = start.Begin()
+    start.StoT()
+    InAndOut.OutFile(desc,conf.TMPFILE)
     start.End()
     

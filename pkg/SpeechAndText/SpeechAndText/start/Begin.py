@@ -3,7 +3,7 @@ import  conf.conf as conf
 
 
 #修改位置
-import init
+import pkg.SpeechAndText.SpeechAndText.init as init
 
 
 

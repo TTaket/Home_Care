@@ -12,8 +12,12 @@ def Start_Work():
         #1.进行语音输入 把文件发送到ff的缓冲区里面
         logging.info("Kernel:进入语音读入模块")
         #语音读入和用户输入模块还没写先跳过第一步骤
+        User.InInfo(conf.KERNELTMPPATH)
+        #把缓冲区文件刷到文件指定位置
+        os.system(f"cp {conf.KERNELTMPPATH}/{conf.TMPFILE} {conf.KERNELTMPFILEPATH}/{conf.TMPFILE}")
+        #logging.info(f"cp {conf.KERNELTMPPATH}/{conf.TMPFILE} {conf.KERNELTMPFILEPATH}/{conf.TMPFILE}")
 
-        
+    
         #2.把关键字进行提取发送到会Kernel里面
         logging.info("Kernel:进入关键词读取模块")
         f = open(conf.KERNELTMPFILELIST , 'r' ,encoding="utf-8")

@@ -13,7 +13,7 @@ def ChooseWords(Words):
         handle.ParameterInvaild(Words)
     except conf.Customization_Error as err:
         logging.info(err.info)
-        print (err.info)
+        print ("没有匹配到任何的词")
         exit()
     else:
         pass

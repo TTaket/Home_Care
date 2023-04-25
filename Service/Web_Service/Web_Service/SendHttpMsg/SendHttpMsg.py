@@ -22,14 +22,16 @@ def SendHttpMsg(typ , dic):
     #匹配并进行发送信息
     match typ:
         case conf.ORDERMSGREQ:
-            Msg = conf.OrderMsgReq(dic)
+            #Msg = conf.OrderMsgReq(dic)
+            #translate to website REQ
+            Msg = conf.WebMsgReq(dic)
             resp = WebBase.__MsgBase(conf.ORDERINFO_URL , Msg)
-            retdic = json.loads(resp.text)
-            if resp.status_code != 200:
-                print (resp.stauts_code , resp.text)
-                raise conf.Customization_Error("访问返回状态码非200")
+            retdic = eval(resp)
+#           if resp.status_code != 200:
+#               print (resp.stauts_code , resp.text)
+#               raise conf.Customization_Error("访问返回状态码非200")
             #一切正常
-            return retdic["MsgInfo"]
+            return retdic["result"]
         case _:
             #报错
             WrongInfo = (f"没有类型这样的请求包{type}")

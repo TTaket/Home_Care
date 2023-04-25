@@ -1,4 +1,4 @@
 from . import SpeechAndText
 
-# StoT = SpeechAndText.StoT()
-# TtoS = SpeechAndText.TtoS()
+StoT = SpeechAndText.StoT
+# TtoS = SpeechAndText.TtoS

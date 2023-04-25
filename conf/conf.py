@@ -58,6 +58,18 @@ FF_FILEPATH = FF_INPATH+"/Files/"
 FF_ANSFILE = FF_OUTPATH+"/"+TMPFILE
 
 
+#---------------------SpeechAndText模块
+# FF输入缓冲区路径
+SAT_INPATH = BASEPATH+"/pkg/SpeechAndText/In"
+
+# FF输出缓冲区路径
+SAT_OUTPATH = BASEPATH+"/pkg/SpeechAndText/Out"
+
+# FF临时答案文件
+SAT_ANSFILE = SAT_OUTPATH+"/"+TMPFILE
+
+
+
 #---------------------OrderInfo 模块
 # OrderInfo输入缓冲区路径
 ORDERINFO_INPATH = BASEPATH+"/Service/OrderInfo/In"
@@ -71,6 +83,19 @@ ORDERINFO_INFILE = ORDERINFO_INPATH+"/"+TMPFILE
 # OrderInfo临时答案文件
 ORDERINFO_OUTFILE = ORDERINFO_OUTPATH+"/"+TMPFILE
 
+
+#---------------------User_InInfo 模块
+# User_InInfo输入缓冲区路径
+USERININFO_INPATH = BASEPATH+"/User/User_InInfo/In"
+
+# User_InInfo传入文件位置
+USERININFO_INFILE = USERININFO_INPATH+"/"+TMPFILE
+
+# User_InInfo输出缓冲区
+USERININFO_OUTPATH = BASEPATH+"/User/User_InInfo/Out"
+
+# User_InInfo临时答案文件
+USERININFO_ANSFILE = USERININFO_OUTPATH+"/"+TMPFILE
 
 #---------------------User_OutInfo 模块
 # User_OutInfo输入缓冲区路径
@@ -101,7 +126,8 @@ ORDERMSGRESP = "1002"
 TypeList = {ORDERMSGREQ}
 
 #定义url
-ORDERINFO_URL = "http://43.138.161.192:8080/Order"
+ORDERINFO_URL1 = "http://43.138.161.192:8080/Order"
+ORDERINFO_URL = "http://123.57.187.239:8000/api/person/postRobotOrderInfo/"
 UrlList = {ORDERINFO_URL}
 
 #定义信息最大大小 目前为1M
@@ -115,6 +141,11 @@ class OrderMsgReq(WebMsg):
     def __init__(self,dic):
         self.MsgUserID = dic["UserID"]
         self.MsgDemandID = dic["DemandID"]
+
+class WebMsgReq(WebMsg):
+    def __init__(self,dic):
+        self.user_id = dic["UserID"]
+        self.requirement_id =dic["DemandID"]
 
 
 class OrderMsgResp(WebMsg):

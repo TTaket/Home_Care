@@ -4,3 +4,4 @@ from . import User_OutInfo
 
 ChooseWords = User_Interact.ChooseWords
 OutInfo = User_OutInfo.OutInfo
+InInfo = User_InInfo.InInfo
